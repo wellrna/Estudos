@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<title>Curso de Javascript</title>
+		<meta charset="UTF-8">
+
+		<style>
+			
+		</style>
+		
+		<script>
+
+			document.write("<span style='font-size:20pt'><span style='font-family: verdana, arial'>");
+//			window.document.write("Sem limpar0.");
+
+		</script>
+
+	</head>
+
+	<body>
+	
+
+			<p id="curso">CURSO DE JAVASCRIPT - 20pt<br><br></p>
+			<p id="curso1">AULA  match() - 20px<br><br></p>
+			
+		<script>
+
+//			document.write("<span style='font-size:20px'><span style='font-family: verdana, arial'>");
+//			document.write("<p id=curso>CURSO DE JAVASCRIPT<br><br>");
+			document.getElementById("curso").style.color="#F00";
+//			document.write("<p id=curso1>AULA  match()<br><br></p>");
+			document.getElementById("curso1").style.color="#00F";
+			document.getElementById("curso1").style.fontSize="20px";
+
+//			window.document.write("Sem limpar1.<br>"); forma de usar document.write sem limpar a tela
+			
+//			var name = (window.prompt('Qual é o seu nome?'))
+//			var idade = (window.prompt('Qual é a sua idade?'))
+//			var gênero = (window.prompt('Qual é o seu gênero?'))
+
+//			document.write('Seu nome é ' + name + '<br>')
+//			document.write('Sua idade é ' + idade + '<br>')
+//			document.write('Seu gênero é ' + gênero + '<br>')
+
+
+//			let slides=new Array("https://images.pexels.com/photos/7975094/pexels-photo-7975094.jpeg", "https://images.pexels.com/photos/2944895/pexels-photo-2944895.jpeg", "https://images.pexels.com/photos/776186/pexels-photo-776186.jpeg", "https://images.pexels.com/photos/7975089/pexels-photo-7975089.jpeg", "https://images.pexels.com/photos/7975090/pexels-photo-7975090.jpeg", "https://images.pexels.com/photos/7975095/pexels-photo-7975095.jpeg", "https://images.pexels.com/photos/941523/pexels-photo-941523.jpeg", "https://images.pexels.com/photos/3007691/pexels-photo-3007691.jpeg", "https://images.pexels.com/photos/6713353/pexels-photo-6713353.jpeg", "https://images.pexels.com/photos/51394/spin-web-nature-bug-51394.jpeg", "https://images.pexels.com/photos/9201380/pexels-photo-9201380.jpeg", "https://images.pexels.com/photos/4383534/pexels-photo-4383534.jpeg", "https://images.pexels.com/photos/4383538/pexels-photo-4383538.jpeg", "https://images.pexels.com/photos/276377/pexels-photo-276377.jpeg", "https://images.pexels.com/photos/2761192/pexels-photo-2761192.jpeg", "https://images.pexels.com/photos/2317432/pexels-photo-2317432.jpeg", "https://images.pexels.com/photos/65276/spider-macro-fight-nutritional-supplements-65276.jpeg", "https://images.pexels.com/photos/5675644/pexels-photo-5675644.jpeg", "https://images.pexels.com/photos/5859888/pexels-photo-5859888.jpeg", "https://images.pexels.com/photos/5876163/pexels-photo-5876163.jpeg", "https://images.pexels.com/photos/68792/pexels-photo-68792.jpeg", "https://images.pexels.com/photos/9201382/pexels-photo-9201382.jpeg", "https://images.pexels.com/photos/5422784/pexels-photo-5422784.jpeg");
+//			let slides=["C:/Workspace/Aulas/Imagens/pexels-pixabay-276255.jpg","C:/Workspace/Aulas/Imagens/pexels-chris-f-2944895.jpg","C:/Workspace/Aulas/Imagens/pexels-egor-kamelev-776186.jpg"];
+
+//			let resultado = slides.match("https://images.pexels.com/photos/");
+
+			let texto="curso canal Javascript";
+			let resultado=texto.match("canal");
+			
+			document.write("<br>resultado  <br>");
+			document.write(resultado + "<br>");
+			document.write(resultado.length + "<br>");
+			console.log(resultado);
+			
+			let texto1="canal canal canal canal canal canal";
+			let resultado1=texto1.match("canal");
+			
+			document.write("<br>resultado1  <br>");
+			document.write(resultado1 + "<br>");
+			document.write(resultado1.length + "<br>");
+			document.write(resultado1[0] + "<br>");
+			console.log(resultado1);
+			console.log(resultado1.length);
+
+			let texto2="canal canal canal canal canal canal";
+			let resultado2=texto2.match(/canal/g); //  as / indicam que é para armazenar em array e o g para pesquisar todas as ocorrências
+			
+			document.write("<br>resultado2  <br>");
+			document.write(resultado2 + "<br>");
+			document.write(resultado2.length + "<br>");
+			document.write(resultado2[0] + "<br>");
+			document.write(resultado2[1] + "<br>");
+			document.write(resultado2[2] + "<br>");
+			console.log(resultado2);
+			console.log(resultado2.length);
+
+			let texto3="caNal cAnAl Canal canaL CaNaL CanaL";
+			let resultado3=texto3.match(/canal/gi); // a letra i indica que a busca é sem case-sensitive
+			
+			document.write("<br>resultado3  <br>");
+			document.write(resultado3 + "<br>");
+			document.write(resultado3.length + "<br>");
+			document.write(resultado3[0] + "<br>");
+			document.write(resultado3[1] + "<br>");
+			document.write(resultado3[2] + "<br>");
+			console.log(resultado3);
+			console.log(resultado3.length);
+
+			let texto4="caNal cAnAl Canal canaL CaNaL CanaL";
+			let resultado4=texto4.match(/a/gi); // a letra i indica que a busca é sem case-sensitive
+			
+			document.write("<br>resultado4  <br>");
+			document.write(resultado4 + "<br>");
+			document.write(resultado4.length + "<br>");
+			document.write(resultado4[0] + "<br>");
+			document.write(resultado4[1] + "<br>");
+			document.write(resultado4[2] + "<br>");
+			console.log(resultado4);
+			console.log(resultado4.length);
+
+			let texto5="caNal cAnAl Canal canaL CaNaL CanaL";
+			let resultado5=texto5.match(/[cnl]/gi); // a letra i indica que a busca é sem case-sensitive
+			
+			document.write("<br>resultado5  <br>");
+			document.write(resultado5 + "<br>");
+			document.write(resultado5.length + "<br>");
+			document.write(resultado5[0] + "<br>");
+			document.write(resultado5[1] + "<br>");
+			document.write(resultado5[2] + "<br>");
+			console.log(resultado5);
+			console.log(resultado5.length);
+
+
+		
+		</script>
+
+			<p>Modificador	Descrição<br></p>
+			<p>i	Busca sem case-sensitive, ou seja, não diferencia letras maiúsculas de minúsculas<br></p>
+			<p>g	Diz ao método para encontrar todas as ocorrências da palavra e não parar na primeira encontrada, cada ocorrência é armazenada em uma posição do array<br></p>
+			<p>m	Pesquisa normal sem armazenar em forma de array<br></p>
+			<p><br></p>
+
+			<p>Confira a seguir uma tabela com outras opções de pesquisa usando colchetes.<br></p>
+			<p>Expressão	Descrição<br></p>
+			<p>[abcd]	Pesquisa pelos caracteres “a”, “b”, “c” e “d”<br></p>
+			<p>[^ab]	Pesquisa por todos os caracteres, menos os “a” e “b”.<br></p>
+			<p>[a-f]	Pesquisa pelos caracteres de “a” até “f”<br></p>
+			<p>[^a-f]	Pesquisa por todos os caracteres, menos os de “a” até “f”<br></p>
+			<p>[a|f]	Pesquisa pelos caracteres “a” e “f”, semelhante à primeira opção.<br></p>
+			<p><br></p>
+
+			<p>Existem vários “metacaracteres” que podemos usar, confira a tabela a seguir.<br></p>
+			<p><br></p>		
+			<p>Metacaratere	Descrição<br></p>
+			<p>\w	Pesquisa somente por letras e numerais, ignorando espaços, traços, etc.<br></p>
+			<p>\W	Pesquisa por caracteres diferentes de números e letras<br></p>
+			<p>\d	Pesquisa por numerais<br></p>
+			<p>\D	Pesquisa por todos os caracteres que não são numerais<br></p>
+			<p>\s	Pesquisa pelos espaços<br></p>
+			<p>\S	Pesquisa por todos os caracteres, menos os espaços<br></p>
+			<p>\b	Pesquisa por ocorrência que iniciem ou terminem com uma letra ou número, cada ocorrência que iniciar e terminar com um número ou letra conta como 2<br></p>
+			<p>\B	Pesquisa por ocorrência que NÃO iniciem ou terminem com uma letra ou número<br></p>
+			<p>\O	Procura por caracteres nulos.<br></p>
+			<p>\n	Procura por quebra de linha.<br></p>
+			<p>\r	Procura por caractere de “retorno de carro” ENTER.<br></p>
+			<p>\t	Procura por caractere de tabulação TAB<br></p>
+			<p>\v	Procura por caractere de tabulação vertical<br></p>
+			<p>s+	Procura por palavras que contenham uma ou mais letras “s”<br></p>
+			<p><br></p>
+		
+	</body>
+<!--	
+	<footer>
+
+
+	</footer>
+-->
+</html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang=“pt-br”>
+	<head>
+		<title>Curso de Javascript</title>
+		<meta charset=“UTF-8”>
+
+<!--
+		<style>
+
+		</style>
+-->
+
+		<script>
+
+			document.write("<span style='font-size:20px'><span style='font-family: verdana, arial'>");
+			document.write("<p id=curso>CURSO DE JAVASCRIPT<br><br></p>");
+			document.getElementById("curso").style.color="#F00";
+			
+		</script>
+	</head>
+<!--PRIMEIRA FORMA DE FAZER
+	<body>  
+-->
+	<body onload="formata()"> <!-- SEGUNDA FORMA DE FAZER -->
+
+		<p id="cursobody">Aula CSS</p> 
+		<p id="cursobody1">Aula CSS1<br><BR></p> 
+
+<!--
+-->
+			<p>A seguir disponho uma tabela com uma série de propriedades CSS que podem ser manipuladas por javascript, na esquerda temos a propriedade original CSS e no centro como deve ser usada no javascript, na coluna da direita tem uma breve descrição da propriedade.</p>
+
+			<figure class="wp-block-table"><table><tbody><tr><td width="180"><strong>CSS</strong><strong></strong></td><td width="160"><strong>JavaScript</strong><strong></strong></td><td><strong>Descrição</strong> *Os valores sublinhados são os padrões. <strong>*&amp;</strong> indica que as propriedades anteriores se repetem após o valor indicado.<strong></strong></td></tr><tr><td>align-content</td><td>alignContent</td><td>Alinhamento entre as linhas dentro de um container flexível quando os itens não usam todo o espaço disponível. Valores: stretch, center, flex-start, flex-end, space-between, space-around, initial, inherit.</td></tr><tr><td>align-items</td><td>alignItems</td><td>Alinhamento para itens dentro de um container flexível. Valores: stretch, center, flex-start, flex-end, space-between, space-around, baseline, initial, inherit.</td></tr><tr><td>align-self</td><td>alignSelf</td><td>Definir o alinhamento de um dos itens no interior de um elemento flexível para se ajustar ao container. Valores: auto, stretch, center, flex-start, flex-end, space-between, space-around, baseline, initial, inherit.</td></tr><tr><td>animation</td><td>animation</td><td>Metapropriedade. Define todas as propriedades de animação a seguir, menos animationPlayState.</td></tr><tr><td>animation-delay</td><td>animationDelay</td><td>Define quando a animação vai começar. Valores: time, initial, inherit. (padrão time com valor 0)</td></tr><tr><td>animation-direction</td><td>animationDirection</td><td>Direção da animação. Valores: normal, reverse, alternate, alternate-reverse, initial, inherit</td></tr><tr><td>animation-duration</td><td>animationDuration</td><td>Tempo de duração da animação em milissegundos. Valores: time, initial, inherit. (padrão time com valor 0)</td></tr><tr><td>animation-fill-mode</td><td>animationFillMode</td><td>Quais valores serão aplicadas pela animação fora do período que ele está executando. Valores: none, forwards, backwards, both, initial, inherit</td></tr><tr><td>animation-iteration-count</td><td>animationIterationCount</td><td>Número de vezes que uma animação deve ser executada. Valores: number, infinite, initial, inherit (padrão number com valor 1)</td></tr><tr><td>animation-name</td><td>animationName</td><td>Nome da animação ou para os @keyframes da animação. Valores: none, keyframename, initial, inherit</td></tr><tr><td>animation-timing-function</td><td>animationTimingFunction</td><td>Curva de velocidade da animação. Valores: linear, ease, ease-in, ease-out, cubic-bezier(n,n,n,n), initial, inherit</td></tr><tr><td>animation-play-state</td><td>animationPlayState</td><td>Define se a animação está em execução ou em pausa. Valores: running, paused, initial, inherit</td></tr><tr><td>azimuth</td><td>azimuth</td><td>Posicionamento espacial do áudio gerado pelo objeto. Valores: ângulo, left-side, far-left, left, center-left, center, center-right, right, far-right, right-side, [&amp; behind], leftwards, rightwards, inherit</td></tr><tr><td>background</td><td>background</td><td>Metapropriedade. Define backgroundColor, backgroundImage, backgroundRepeat, backgroundAttachment e backgroundPosition.</td></tr><tr><td>background-attachment</td><td>backgroundAttachment</td><td>Indica se a imagem de fundo vai ser fixa ou vai rolar. Valores: scroll, fixed, inherit</td></tr><tr><td>background-color</td><td>backgroundColor</td><td>Cor de fundo. Valores: cor, transparente, inherit</td></tr><tr><td>background-image</td><td>backgroundImage</td><td>Imagem de fundo. Valores: URL, none, inherit</td></tr><tr><td>background-position</td><td>backgroundPosition</td><td>Cordenadas X e Y da imagem de fundo. Valores: porcentagem, tamanho (exemplo: x,y), top,center,botton, left, center, right, inherit</td></tr><tr><td>background-repeat</td><td>backgroundRepeat</td><td>Configura a repetição da imagem de fundo. Valores: repeat, repeat-x, repeat-y, no-repeat, inherit</td></tr><tr><td>background-clip</td><td>backgroundClip</td><td>Especifica a área de exibição da imagem de fundo. Valores: border-box, padding-box, content-box, initial, inherit</td></tr><tr><td>background-origin</td><td>backgroundOrigin</td><td>Posicionamento de origem da imagem. Valores: padding-box, border-box, content-box, initial, inherit</td></tr><tr><td>background-size</td><td>backgroundSize</td><td>Tamanho da imagem de fundo. Valores: auto, length, cover, contain, intial, inherit</td></tr><tr><td>backface-visibility</td><td>backfaceVisibility</td><td>A propriedade backfaceVisibility define se ou não um elemento deve ser visível quando não está rotacionada de frente para a tela. Esta propriedade é útil quando um elemento é rodado, e você não quer ver a parte de trás. Valores: visible, hidden, initial, inherit</td></tr><tr><td>border</td><td>border</td><td>Metapropriedade. Define todas as bordas ao mesmo tempo.</td></tr><tr><td>border-bottom</td><td>borderBottom</td><td>Metapropriedade. Define as propriedades borderBottomWidth, borderBottomStyle e borderBottomColor.</td></tr><tr><td>border-bottom-color</td><td>borderBottomColor</td><td>Cor da borda inferior. Valores: cor, inherit</td></tr><tr><td>border-adius</td><td>borderRadius</td><td>Define o arredondamento de todas as bordas igualmente Valores: length|%, initial, inherit (valor padrão 0)</td></tr><tr><td>border-bottom-left-radius</td><td>borderBottomLeftRadius</td><td>Arredonda a borda inferior esquerda Valores: 0 (% porcentagem), initial, inherit (padrão valor = 0)</td></tr><tr><td>border-bottom-right-radius</td><td>borderBottomRightRadius</td><td>Arredonda a borda inferior direita Valores: 0 (% porcentagem), initial, inherit (padrão valor = 0)</td></tr><tr><td>border-top-left-radius</td><td>borderTopLeftRadius</td><td>Arredonda a borda superior esquerda Valores: 0 (% porcentagem), initial, inherit (padrão valor = 0)</td></tr><tr><td>border-top-right-radius</td><td>borderTopRightRadius</td><td>Arredonda a borda superior direita Valores: 0 (% porcentagem), initial, inherit (padrão valor = 0)</td></tr><tr><td>border-bottom-style</td><td>borderBottomStyle</td><td>Estilo da borda inferior. Valores: none, hidden, dotted, dashed, solid, double, grove, ridge, inset, outset, inherit</td></tr><tr><td>border-bottom-width</td><td>borderBottomWidth</td><td>Largura da borda inferior. Valores: thin, medium, thick, tamanho, inherit</td></tr><tr><td>Borde-collapse</td><td>borderCollapse</td><td>Reduzir a borda da tabela Valores: separate, colapse, initial, inherit</td></tr><tr><td>border-color</td><td>borderColor</td><td>Cores de todas as bordas.</td></tr><tr><td>border-image</td><td>borderImage</td><td>Metapropriedade, especifica uma imagem como borda em torno de um elemento &lt;div&gt; Valores: source slice width outset repeat, initial, inherit</td></tr><tr><td>border-image-outset</td><td>borderImageOutset</td><td>Configura a imagem de borda para fora ou para dentro das bordas originais da &lt;div&gt; Valores: length, number, initial, inherit (valor padrão 0), para ajustar internamente use valores menores que 1, por exemplo 0.1</td></tr><tr><td>border-image-repeat</td><td>borderImageRepeat</td><td>Configura a repetição da imagem usada como borda. Valores: stretch, repeat, round, initial, inherit</td></tr><tr><td>border-image-slice</td><td>borderImageSlice</td><td>Especifica o deslocamento/distância das imagens da borda em caso de repetição Valores: number|%|, fill, initial, inherit (valor padrão 100%)</td></tr><tr><td>border-image-source</td><td>borderImageSource</td><td>Especifica qual imagem será usada como borda em torno de um elemento div: Valores: none, image, initial, inherit</td></tr><tr><td>border-image-width</td><td>borderImageWidth</td><td>Largura da imagem de borda Valores: number|%, auto, initial, inherit (valor padrão 1)</td></tr><tr><td>border-left</td><td>borderLeft</td><td>Semelhante a borderBottom aplicado à borda esquerda.</td></tr><tr><td>border-left-color</td><td>borderLeftColor</td><td>Semelhante a borderBottomColor aplicado à borda esquerda.</td></tr><tr><td>border-left-style</td><td>borderLeftStyle</td><td>Semelhante a borderBottomStyle aplicado à borda esquerda.</td></tr><tr><td>border-left-width</td><td>borderLeftWidth</td><td>Semelhante a borderBottomWidth aplicado à borda esquerda.</td></tr><tr><td>border-right</td><td>borderRight</td><td>Semelhante a borderBottom aplicado à borda direita.</td></tr><tr><td>border-right-color</td><td>borderRightColor</td><td>Semelhante a borderBottomColor aplicado à borda direita.</td></tr><tr><td>border-right-style</td><td>borderRightStyle</td><td>Semelhante a borderBottomStyle aplicado à borda direita.</td></tr><tr><td>border-right-width</td><td>borderRightWidth</td><td>Semelhante a borderBottomWidth aplicado à borda direita.</td></tr><tr><td>border-spacing</td><td>borderSpacing</td><td>Espaçamento entre as bordas de duas células adjacentes, somente para tabelas. Valores: tamanho, inherit.</td></tr><tr><td>border-style</td><td>borderStyle</td><td>Estilo de todas as bordas. Valores: none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, inherit</td></tr><tr><td>border-top</td><td>borderTop</td><td>Semelhante a borderBottom aplicado à borda esquerda.</td></tr><tr><td>border-top-color</td><td>borderTopColor</td><td>Semelhante a borderBottom aplicado à borda esquerda.</td></tr><tr><td>border-top-style</td><td>borderTopStyle</td><td>Semelhante a borderBottom aplicado à borda esquerda.</td></tr><tr><td>border-top-width</td><td>borderTopWidth</td><td>Semelhante a borderBottom aplicado à borda esquerda.</td></tr><tr><td>border-width</td><td>borderWidth</td><td>Largura de todas as bordas. Valores: thin, medium, thick, tamanho</td></tr><tr><td>bottom</td><td>bottom</td><td>Distância entre a base de um objeto e a base do bloco onde está contido. Valores: tamanho, porcentagem, auto, inherit</td></tr><tr><td>box-shadow</td><td>boxShadow</td><td>Adiciona sombra a um elemento div. Valores: none, h-shadow v-shadow blur spread color, inset, initial, inherit</td></tr><tr><td>box-sizing</td><td>boxSizing</td><td>Permite definir certos elementos para caber dentro de em um outro elemento. Valores: content-box, border-box, initial, inherit</td></tr><tr><td>caption-side</td><td>captionSide</td><td>Define ou retorna a posição do table caption. Valores: top, bottom, initial, inherit</td></tr><tr><td>clear</td><td>clear</td><td>Com o valor configurado diferente de none, será posicionado abaixo dos elementos flutuantes que estiverem alinhados da maneira especificada aqui. Valores: none, left, right, both, inherit</td></tr><tr><td>clip</td><td>clip</td><td>Área visível de um objeto. Valores: forma, auto, inherit.</td></tr><tr><td>color</td><td>color</td><td>Cor do texto. Valores: cor, inherit</td></tr><tr><td>column-count</td><td>columnCount</td><td>Especifica o número de colunas que um elemento pode conter Valores: number, auto, initial, inherit</td></tr><tr><td>column-gap</td><td>columnGap</td><td>Especifica a lacuna, separação entre as colunas Valores: length, normal, initial, inherit</td></tr><tr><td>column-rule</td><td>columnRule</td><td>Metapropriedade para definer todas as configurações de columnRule</td></tr><tr><td>column-rule-color</td><td>columnRuleColor</td><td>Especifica a cor da barra divisória entre as colunas Valores: color, initial, inherit</td></tr><tr><td>column-rule-style</td><td>columnRuleStyle</td><td>Define o estilo entre as colunas Valores: none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, initial, inherit</td></tr><tr><td>column-rule-width</td><td>columnRuleWidth</td><td>Largura da separação entre as colunas Valores: medium, thin, thick, length, initial, inherit</td></tr><tr><td>columns</td><td>columns</td><td>Número de colunas Valores: auto, column-width column-count, initial, inherit</td></tr><tr><td>column-span</td><td>columnSpan</td><td>Especifica quantas colunas um elemento deve abranger Valores: 1, all, initial, inherit</td></tr><tr><td>column-width</td><td>columnWidth</td><td>Largura da coluna Valores: auto, length, initial, inherit</td></tr><tr><td>cursor</td><td>cursor</td><td>Estilo do ponteiro do Mouse. Valores: url, auto, crosshair, default, pointer, move, e-resize, ne-resize, nw-resize, n-resize, se-resize, sw-resize, s-resize, w-resize, text, wait, help, inherit.</td></tr><tr><td>direction</td><td>direction</td><td>Direção do texto de um objeto e a ordem de construção das colunas de uma tabela. Valores: ltr, rtl, inherit</td></tr><tr><td>display</td><td>display</td><td>Forma de visualização do objeto. Valores: inline, block, list-item, run-in, compact, marker, table, inline-table, table-row-group, table-header-group, table-footer-group, table-row, table-column-group, table-column, table-cell, table-caption, none, inherit.</td></tr><tr><td>empty-cells</td><td>emptyCells</td><td>Em tabelas que usam conteúdos separador por células, configura se as células sem conteúdo terão bordas ou não. Valores: show, hide, inherit</td></tr><tr><td>filter</td><td>filter</td><td>Aplica filtros de sombra, iluminação, etc Valores: none | blur() | brightness() | contrast() | drop-shadow() | grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia()</td></tr><tr><td>flex</td><td>flex</td><td>Configura todos os itens flexíveis com a mesma largura Valores: flex-grow flex-shrink flex-basis, auto, initial, inherit</td></tr><tr><td>flex-basis</td><td>flexBasis</td><td>Configura a largura inicial de item flexível Valores: number, auto, initial, inherit</td></tr><tr><td>flex-direction</td><td>flexDirection</td><td>Configura a direção de itens flexíveis Valores: row, row-reverse, column, column-reverse, initial, inherit</td></tr><tr><td>flex-flow</td><td>flexFlow</td><td>Fluxo dos elementos flexíveis Valores: flex-direction, flex-wrap, initial, inherit</td></tr><tr><td>flex-grow</td><td>flexGrow</td><td>Especifica quanto o item irá crescer em relação ao resto dos elementos flexíveis no interior do mesmo container Valores: number, initial, inherit</td></tr><tr><td>flex-shrink</td><td>flexShrink</td><td>Especifica quanto o item irá diminuir em relação ao resto dos elementos flexíveis no interior do mesmo container Valores: number, initial, inherit</td></tr><tr><td>flex-wrap</td><td>flexWrap</td><td>Especifica se os itens flexíveis deve envolver ou não Valores: nowrap, wrap, wrap-reverse, initial, inherit</td></tr><tr><td>float</td><td>cssFloat</td><td>Especifica se o elemento vai flutuar a direita ou a esquerda Valores: left, right, none, initial, inherit</td></tr><tr><td>font</td><td>font</td><td>Metapropriedade. Configura todas as propriedades da fonte. Valores: fontStyle | fontVariant | fontWeight | fontSize | lineHeight | fontFamily, caption, icon, menu, message-box, small-caption, status-bar, inherit</td></tr><tr><td>font-family</td><td>fontFamily</td><td>Define uma ou mais famílias de fonte. Valores: |fonte1, fonte2|, inherit</td></tr><tr><td>font-size</td><td>fontSize</td><td>Tamanho da fonte. Valores: tamanho, porcentagem, xx-small, x-small, small, medium, large, x-large, xx-large, larger, smaller, inherit.</td></tr><tr><td>font-style</td><td>fontStyle</td><td>Estilo da fonte Valores: normal, italic, oblique, initial, inherit</td></tr><tr><td>font-variant</td><td>fontVariant</td><td>Como as letras da fonte vão ser exibidas Valores: normal, small-caps, initial, inherit</td></tr><tr><td>font-stretch</td><td>fontStretch</td><td>Largura dos caracteres da fonte, wider estica e narrower achata a fonte. Valores: normal, wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expandes, inherit.</td></tr><tr><td>font-weight</td><td>fontWeight</td><td>Espessura da fonte. Valores: normal, bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900, inherit</td></tr><tr><td>font-stretch</td><td>fontStretch</td><td>Especifica como será o ajuste da fonte, se irá esticar ou encolher por exemplo Valores: normal, condensed, expanded</td></tr><tr><td>height</td><td>height</td><td>Altura do objeto. Valores: tamanho, porcentagem, auto, inherit.</td></tr><tr><td>image-orientation</td><td>imageOrientation</td><td>Especifica a orientação/direção da imagem</td></tr><tr><td>left</td><td>left</td><td>Semelhante à propriedade bottom, porém, aplicado à esquerda. Valores: tamanho, porcentagem, auto, inherit</td></tr><tr><td>letter-spacing</td><td>letterSpacing</td><td>Distância entre os caracteres do texto. Valores: normal, tamanho, inherit</td></tr><tr><td>line-height</td><td>lineHeight</td><td>Altura da linha. Valores: normal, fator, tamanho, porcentagem, inherit.</td></tr><tr><td>list-style</td><td>listStyle</td><td>Metapropriedade. Define as propriedades listStyleType, listStylePosition e listStyleImage.</td></tr><tr><td>list-style-image</td><td>listStyleImage</td><td>Imagem que será usada como marcador. Valores: url, none, inherit</td></tr><tr><td>list-style-position</td><td>listStylePosition</td><td>Posição do marcador. Valores: inside, outside, inherit</td></tr><tr><td>list-style-type</td><td>listStyleType</td><td>Tipo do marcador. Valores: disc, circle, square, decimal, decimal-leading-zero, lower-roman, upper-roman, lower-greek, llower-alpha, lower-latin, upper-aplha, upper-latin, hebrew, armenian, georgian, cjk-ideographic, hiragana, katakana, hiragana-iroha, katakana-iroha, none, inherit</td></tr><tr><td>margin</td><td>margin</td><td>Largura das quatro margens. Valores: tamanho (exemplo: 1,2,3,4), inherit</td></tr><tr><td>margin-bottom</td><td>marginBottom</td><td>Largura da margem inferior. Valores: tamanho, inherit</td></tr><tr><td>margin-left</td><td>marginLeft</td><td>Largura da margem esquerda. Valores: tamanho, inherit</td></tr><tr><td>margin-right</td><td>marginRight</td><td>Largura da margem direita. Valores: tamanho, inherit</td></tr><tr><td>margin-top</td><td>marginTop</td><td>Largura da margem superior. Valores: tamanho, inherit</td></tr><tr><td>max-geight</td><td>maxHeight</td><td>Altura máxima do elemento Valores: none, px, %, initial, inherit</td></tr><tr><td>max-width</td><td>maxWidth</td><td>Largura máxima do elemento Valores: none, px, %, initial, inherit</td></tr><tr><td>min-height</td><td>minHeight</td><td>Altura mínima do elemento Valores: none, px, %, initial, inherit</td></tr><tr><td>min-width</td><td>minWidth</td><td>Largura mínima do elemento Valores: none, px, %, initial, inherit</td></tr><tr><td>nav-down</td><td>navDown</td><td>Define ou retorna para onde navegar ao usar a tecla de navegação seta-para baixo</td></tr><tr><td>nav-index</td><td>navIndex</td><td>Ordem de tabulação de um elemento</td></tr><tr><td>nav-left</td><td>navLeft</td><td>Comportamento ao usar a tecla de navegação de seta-esquerda</td></tr><tr><td>nav-right</td><td>navRight</td><td>Comportamento ao usar a tecla de navegação de seta-direita</td></tr><tr><td>nav-up</td><td>navUp</td><td>Comportamento ao usar a tecla de navegação de seta-para cima</td></tr><tr><td>opacity</td><td>opacity</td><td>Transparência do elemento &lt;div&gt; Valores: number, initial, inherit</td></tr><tr><td>order</td><td>order</td><td>Ordem de itens flexíveis Valores: number, |initial, inherit</td></tr><tr><td>orphans</td><td>orphans</td><td>Especifica o número mínimo de linhas que serão mostradas no final da página Valores: number, initial, inherit</td></tr><tr><td>outline</td><td>outline</td><td>Metapropriedade. Define as propriedades de contorno, outlineColor, outlineStyle, outlineWidth, se difere da borda por não ocupar espaço e não precisa ser retangular.</td></tr><tr><td>outline-color</td><td>outlineColor</td><td>Cor do contorno. Valores: cor, invert, inherit</td></tr><tr><td>outline-style</td><td>outlineStyle</td><td>Estilo do contorno. Valores: none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, inherit</td></tr><tr><td>outline-width</td><td>outlineWitdh</td><td>Largura do contorno. Valores: thin, medium, thick, largura, inherit.</td></tr><tr><td>overflow</td><td>overflow</td><td>Define o comportamento visual do objeto caso ele extrapole a área definida pelo bloco pai. Valores: visible, hidden, scroll, auto, inherit</td></tr><tr><td>overflow-x</td><td>overflowX</td><td>Define o comportamento visual do objeto caso ele extrapole a área definida pelo bloco pai pela horizontal Valores: visible, hidden, scroll, auto, initial, inherit</td></tr><tr><td>overflow-y</td><td>overflowY</td><td>Define o comportamento visual do objeto caso ele extrapole a área definida pelo bloco pai pela vertical Valores: visible, hidden, scroll, auto, initial, inherit</td></tr><tr><td>padding</td><td>padding</td><td>Todos os lados do espaçamento interno. Valores: tamanho (ex: 1,2,3,4), porcentagem (ex. 1,2,3,4), inherit</td></tr><tr><td>padding-bottom</td><td>paddingBottom</td><td>Espaçamento interno inferior. Valores: tamanho, porcentagem, inherit.</td></tr><tr><td>padding-left</td><td>paddingLeft</td><td>Espaçamento interno esquerdo. Valores: tamanho, porcentagem, inherit.</td></tr><tr><td>padding-right</td><td>paddingRight</td><td>Espaçamento interno direito. Valores: tamanho, porcentagem, inherit.</td></tr><tr><td>padding-top</td><td>paddingTop</td><td>Espaçamento interno superior. Valores: tamanho, porcentagem, inherit.</td></tr><tr><td>page-break-after</td><td>pageBreakAfter</td><td>Define ou retorna o comportamento page-break depois de um elemento (para impressão ou visualização de impressão). Valores: auto, always, avoid, emptystring, left, right, initial, inherit</td></tr><tr><td>page-break-before</td><td>pageBreakBefore</td><td>Define ou retorna o comportamento page-break antes de um elemento (para impressão ou visualização de impressão). Valores: auto, always, avoid, emptystring, left, right, initial, inherit</td></tr><tr><td>page-break-inside</td><td>pageBreakInside</td><td>Define ou retorna o comportamento page-break dentro de um elemento (para impressão ou visualização de impressão). Valores: auto, avoid, initial, inherit</td></tr><tr><td>perspective</td><td>perspective</td><td>Perspectiva de visualização do elemento Valores: length, none</td></tr><tr><td>perspective-origin</td><td>perspectiveOrigin</td><td>Base 3D inicial da perspectiva Valores: x-axis y-axis, initial, inherit</td></tr><tr><td>position</td><td>position</td><td>Posicionamento do objeto. Valores: static, relative, absolute, fixed, inherit</td></tr><tr><td>quotes</td><td>quotes</td><td>Configura os elementos de marcação Valores: none, string string string string, initial, inherit</td></tr><tr><td>resize</td><td>resize</td><td>Configura um element &lt;div&gt; como reimencionável Valores: none, both, horizontal, vertical, initial, inherit</td></tr><tr><td>right</td><td>right</td><td>Semelhante à propriedade bottom, porém, aplicado à direita. Valores: tamanho, porcentagem, auto, inherit</td></tr><tr><td>table-layout</td><td>tableLayout</td><td>Configura em fixo o tamanho das linhas e colunas da tabela Valores: automatic, fixed, initial, inherit</td></tr><tr><td>tab-size</td><td>tabSize</td><td>Configura o espaçamento do elemento &lt;pre&gt; Valores: number, length, initial, inherit</td></tr><tr><td>text-align</td><td>textAlign</td><td>Alinhamento do texto. Valores: left, right, center, justify, stringAlinhamento, inherit</td></tr><tr><td>text-align-last</td><td>textAlignLast</td><td>Alinha a última linha do parágrafo Valores: auto, left, right, center, justify, start, end, initial, inherit</td></tr><tr><td>text-decoration</td><td>textDecoration</td><td>Decoração do texto. Valores: none, underline, overline, line-through, blink, inherit</td></tr><tr><td>text-justify</td><td>textJustify</td><td>Configura o alinhamento do texto em justificado.</td></tr><tr><td>text-indent</td><td>textIndent</td><td>Indentação da primeira linha do texto. Valores: tamanho, porcentagem, inherit.</td></tr><tr><td>text-overflow</td><td>textOverflow</td><td>Configura o texto excedente ao container Valores: clip, ellipsis, string, initial, inherit</td></tr><tr><td>text-shadow</td><td>textShadow</td><td>Lista de sombras aplicadas ao texto. Valores: none, {cor, [distanciaX &amp; distanciaY &amp; desfoque}, inherit</td></tr><tr><td>text-transform</td><td>textTransform</td><td>Define o fluxo de caracteres maiúsculos e minúsculos do texto. Valores: capitalize, uppercase, lowercase, none, inherit</td></tr><tr><td>top</td><td>top</td><td>Semelhante à propriedade bottom, porém, aplicado ao topo. Valores: tamanho, porcentagem, auto, inherit</td></tr><tr><td>transform</td><td>transform</td><td>Aplica uma transformação como rotação e escala por exemplo a uma &lt;div&gt; Valores: none, transform-functions, initial, inherit</td></tr><tr><td>transform-origin</td><td>transformOrigin</td><td>Ponto de origem, inicial para aplicar a transformação Valores: x-axis, y-axis, z-axis, initial, inherit</td></tr><tr><td>transform-style</td><td>transformStyle</td><td>Define ou retorna como elementos aninhados são renderizados no espaço 3D. Valores: flat, preserve-3d, initial, inherit</td></tr><tr><td>transition</td><td>transition</td><td>Define as configurações da transição. Valores: property duration timing-function delay, initial, inherit</td></tr><tr><td>transition-property</td><td>transitionProperty</td><td>Propriedade de configuração da transição Valores: none, all|property, initial, inherit</td></tr><tr><td>transition-duration</td><td>transitionDuration</td><td>Tempo de duração da transição Valores: time, initial, inherit</td></tr><tr><td>transition-timing-function</td><td>transitionTimingFunction</td><td>Configura curva de velocidade da transição, velocidade do andamento Valores: ease linear, ease-in, ease-out, ease-in-out, cubic-bezier(), Initial, inherit</td></tr><tr><td>transition-delay</td><td>transitionDelay</td><td>Tempo para iniciar a transição Valores: time, initial, inherit</td></tr><tr><td>vertical-align</td><td>verticalAlign</td><td>Alinhamento vertical. Valores: baseline, sub, super, top, text-top, middle, bottom, text-bottom, porcentagem, tamanho, inherit.</td></tr><tr><td>visibility</td><td>visibility</td><td>Visibilidade do objeto. Valores: visible, hidden, colapse, inherit</td></tr><tr><td>word-break</td><td>wordBreak</td><td>Configura a regra de quebra de linha do texto Valores: normal, break-all, keep-all, initial, inherit</td></tr><tr><td>word-wrap</td><td>wordWrap</td><td>Configura se uma palavra poderá ser quebrada para próxima linha Valores: normal, break-word, initial, inherit</td></tr><tr><td>width</td><td>width</td><td>Largura do objeto. Valores: tamanho, porcentagem, auto, inherit</td></tr><tr><td>word-spacing</td><td>wordSpacing</td><td>Diatância entre as palavras. Valores: normal, tamanho, inherit</td></tr><tr><td>z-index</td><td>zIndex</td><td>Profundidade do objeto, empilhamento, camadas. Valores: auto, profundidade, inherit</td></tr></tbody></table></figure>
+		
+		<script>
+//			document.getElementById("cursobody").style.color="#00f"; // PRIMEIRA FORMA DE FAZER
+			
+			function formata(){  // SEGUNDA FORMA DE FAZER
+				document.getElementById("cursobody").style.color="#00f";
+				document.getElementById("cursobody").style.fontWeight="bold";
+				document.getElementById("cursobody").style.textDecoration="underline";
+				document.getElementById("cursobody1").style.color="#00f";
+				document.getElementById("cursobody1").style.textDecoration="underline";
+			}
+			
+			document.write("<span style='font-weight:bold'>ORDENAR ARRAY ALFANUMÉRICO<br><br></span>");
+
+			let nomes = [ "Matheus", "Pedro", "P3dro", "Maria", "Mar1a", "Alan", "Al4n", "Alana", "A1ana", "Alaor", "Ala0r", "Luan", "Marta", "Nair", "Berenice", "Carlos", "Carlo5", "Roberto", "Salma", "Daniel", "Fernanda", "Gabriela", "Heitor", "Jaqueline", "Katia", "Patrícia", "Oneide" ];
+
+			document.write("<span style='font-weight:bolder'><br>INFORMAÇÕES ARRAY font-weight:bolder<br><br></span>");
+			document.write("<span style='font-weight:ligther'><br>INFORMAÇÕES ARRAY font-weight:ligther<br></span>");
+			document.write("<span style='font-weight:inherit'><br>INFORMAÇÕES ARRAY font-weight:inherit<br></span>");
+			document.write("<span style='font-weight:1000'><br>INFORMAÇÕES ARRAY font-weight:1000<br></span>");
+			document.write("<span style='font-weight:100'><br>INFORMAÇÕES ARRAY font-weight:100<br></span>");
+			document.write("<span style='font-weight:500'><br>INFORMAÇÕES ARRAY font-weight:500<br></span>");
+			document.write("<span style='font-weight:900'><br>INFORMAÇÕES ARRAY font-weight:900<br><br></span>");
+			document.write("<span style='font-style:italic'><br>INFORMAÇÕES ARRAY font-style:italic<br></span>");
+			document.write("<span style='font-style:oblique'><br>INFORMAÇÕES ARRAY font-style:oblique<br></span>");
+			document.write("<span style='font-style:initial'><br>INFORMAÇÕES ARRAY font-style:initial<br></span>");
+			document.write("<span style='font-style:inherit'><br>INFORMAÇÕES ARRAY font-style:inherit<br></br></span>");
+			document.write("<span style='text-decoration:underline'><br>INFORMAÇÕES ARRAY text-decoration:underline<br></span>");
+			document.write("<span style='text-decoration:overline'><br>INFORMAÇÕES ARRAY text-decoration:overline<br></span>");
+			document.write("<span style='text-decoration:line-through'><br>INFORMAÇÕES ARRAY text-decoration:through<br></span>");
+			document.write("<span style='text-decoration:blink'><br>INFORMAÇÕES ARRAY text-decoration:blink<br></span>");
+			document.write("<span style='text-decoration:inherit'><br>INFORMAÇÕES ARRAY text-decoration:inherit<br></span>");
+			document.write("Array sem ordem: " + nomes + "<br>");
+			document.write("Tamanho array: " + nomes.length + "<br><br>");
+
+			nomes.sort();
+			document.write("Array ordenado: " + nomes + "<br>");
+
+			document.write("<span style='font-weight:bold'><br><br>ORDENAR OBJETOS<br><br><br></span>");
+
+			let pessoas = [
+			  {   nome: "Matheus", idade: 29, cidade: "São Paulo"
+			  },
+			  {
+				  nome: "Pedro", idade: 18, cidade: "Osasco"
+			  },
+			  {
+				  nome: "Maria", idade: 40, cidade: "Salvador"
+			  },
+			  {
+				  nome: "Alan", idade: 63, cidade: "Manaus"
+			  },
+			  {
+				  nome: "Alana", idade: 32, cidade: "Macapá"
+			  },
+			  {
+				  nome: "Alaor", idade: 33, cidade: "Mirassol"
+			  },
+			  {
+				  nome: "P3dro", idade: 18, cidade: "Osasco"
+			  },
+			  {
+				  nome: "Mar1a", idade: 40, cidade: "Salvador"
+			  },
+			  {
+				  nome: "Al4n", idade: 63, cidade: "Manaus"
+			  },
+			  {
+				  nome: "A1ana", idade: 32, cidade: "Macapá"
+			  },
+			  {
+				  nome: "Ala0r", idade: 33, cidade: "Mirassol"
+			  },
+			  {
+				  nome: "Luan", idade: 43, cidade: "Rio de Janeiro"
+			  },
+			  {
+				  nome: "Marta", idade: 56, cidade: "Curitiba"
+			  },
+			  {
+				  nome: "Nair", idade: 13, cidade: "Joinville"
+			  },
+			  {
+				  nome: "Berenice", idade: 26, cidade: "Recife"
+			  },
+			  {
+				  nome: "Carlos", idade: 43, cidade: "João Pessoa"
+			  },
+			  {
+				  nome: "Carlo5", idade: 43, cidade: "João Pessoa"
+			  },
+			  {
+				  nome: "Roberto", idade: 76, cidade: "Anapolis"
+			  },
+			  {
+				  nome: "Salma", idade: 83, cidade: "Bebedouro"
+			  },
+			  {
+				  nome: "Daniel", idade: 22, cidade: "São Sebatião da Grama"
+			  },
+			  {
+				  nome: "Fernanda", idade: 3, cidade: "Guarulhos"
+			  },
+			  {
+				  nome: "Gabriela", idade: 55, cidade: "Holambra"
+			  },
+			  {
+				  nome: "Heitor", idade: 18, cidade: "Florianópolis"
+			  },
+			  {
+				  nome: "Jaqueline", idade: 27, cidade: "Porto Alegre"
+			  },
+			  {
+				  nome: "Katia", idade: 46, cidade: "Diadema"
+			  },
+			  {
+				  nome: "Patrícia", idade: 52, cidade: "Esmeralda"
+			  },
+			  {
+				  nome: "Oneide", idade: 95, cidade: "Limeira"
+			  }
+			];
+			let pessoas1 = pessoas
+			
+			document.write("Objeto sem ordem: " + JSON.stringify(pessoas) + "<br>");
+			document.write("Tamanho Objeto: " + pessoas.length + "<br><br>");
+			document.write("<span style='font-weight:bold'><br>INFORMAÇÕES OBJETO - LÓGICA 1 - ORDEM CRESCENTE<br><br></span>");
+			
+			
+			pessoas.sort(function(a, b) {
+			  if(a.nome < b.nome) {
+				return -1;
+			  } else {
+				return true;
+			  }
+			});
+			
+//			console.log(pessoas);
+			document.write("OBJETO 1 ordenado crescente: " + JSON.stringify(pessoas) + "<br><br>");
+
+			document.write("<span style='font-weight:bold'><br>INFORMAÇÕES OBJETO - LÓGICA 1 - ORDEM DECRESCENTE<br><br></span>");
+			
+			
+			pessoas.sort(function(a, b) {
+			  if(a.nome > b.nome) {
+				return -1;
+			  } else {
+				return true;
+			  }
+			});
+			
+//			console.log(pessoas);
+			document.write("OBJETO 1 ordenado decrescente: " + JSON.stringify(pessoas) + "<br><br>");
+
+			document.write("<span style='font-weight:bold'><br>INFORMAÇÕES OBJETO - LÓGICA 2 - ORDEM CRESCENTE<br><br></span>");
+			
+
+			pessoas1.sort(function (a, b) {
+			  return a.nome > b.nome ? 1 : b.nome > a.nome ? -1 : 0;
+			});
+
+			document.write("OBJETO 2 ordenado crescente: " + JSON.stringify(pessoas1) + "<br><br>");
+
+			document.write("<span style='font-weight:bold'><br>INFORMAÇÕES OBJETO - LÓGICA 2 - ORDEM DECRESCENTE<br><br></span>");
+			
+
+			pessoas1.sort(function (a, b) {
+			  return a.nome > b.nome ? 1 : b.nome > a.nome ? -1 : 0;
+			});
+
+			document.write("OBJETO 2 ordenado decrescente: " + JSON.stringify(pessoas1) + "<br><br>");
+
+		</script>
+
+	</body>
+	<footer>
+
+
+	</footer>
+</html>

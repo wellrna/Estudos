@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang=“pt-br”>
+	<head>
+		<title>Curso de Javascript</title>
+		<meta charset=“UTF-8”>
+
+<!--
+		<style>
+
+		</style>
+-->
+
+		<script>
+
+			document.write("<span style='font-size:20px'><span style='font-family: verdana, arial'>");
+
+			let num;
+			let vez;
+		
+			function valida(){
+
+				if(document.f_recursivo.f_numero.value <1 || document.f_recursivo.f_numero.value >10){
+					alert("Digite um número entre 1 e 10");
+					document.getElementById("f_inumero").focus();
+					return false;
+				} else {
+					num=document.f_recursivo.f_numero.value
+					if (num == 1){
+						vez = " VEZ"
+					} else {
+						vez = " VEZES"
+					}
+					document.write("<span style='font-weight:bold'><br>IMPRESSÃO MENSAGEM NA TELA "+ num + vez + "<br><br></span>");
+					cj();
+					document.write("<span style='font-weight:bold'><br>CONTADOR DO NÚMERO ZERO ATÉ O NÚMERO " + num + "<br><br></span>");
+					contador(0,num);
+					document.write("<span style='font-weight:bold'><br>FATORIAL DE " + num + "<br><br></span>");
+					document.write(impFatorial(num) + "Fatorial de " + num + " é: " + fatorial(num) + "<br><br>");
+					document.write("<span style='font-weight:bold'><br>SOMATÓRIO de " + num + "<br><br></span>");
+					document.write(impSomatorio(num) + "O Somatório de " + num + " é: " + soma(num));
+				}
+			}
+			
+//			document.write("<br>IMPRESSÃO MENSAGEM NA TELA "+ num + "VEZES<br><br>");
+
+			let timer;
+			let cont = 0;
+			
+			function cj(){
+				if(cont < num){
+					cont++;
+					document.write("Curso de Javascript " + cont +"<br>");
+//					timer=setTimeout(cj,500);
+					cj();
+				}
+			}
+			
+//			cj();
+
+//			document.write("<br>CONTADOR<br><br>");
+
+			function contador(cont,num){
+				document.write(cont + "<br>");
+				if(num > cont){
+					contador(++cont,num);
+				}
+			}
+
+//			contador(0,num);
+
+
+//			document.write("<br>FATORIAL DE " + num + "<br><br>");
+
+
+			function impFatorial(n){
+				if(num == 1){
+					document.write("O Fatorial de " + num + " equivale a: " + n + "<br><br>");
+					return ""
+				} else if(n == num){
+					document.write("O Fatorial de " + n + " equivale a: " + n);
+				} else if(n == 1){
+					document.write(" * " + n + "<br><br>");
+					return ""
+				} else {
+					document.write(" * " + n);
+				}
+				
+				return impFatorial(n-1);
+			}
+
+			
+			function fatorial(n){
+				if(n == 1){
+					return 1;
+				}
+				return n*fatorial(n-1);
+			}
+
+//			document.write(impFatorial(num) + "Fatorial de " + num + " é: " + fatorial(num) + "<br><br>");
+
+
+//			document.write("<br>SOMATÓRIO de " + num + "<br><br>");
+
+			function impSomatorio(n){
+				if(num == 1){
+					document.write("O Somatório de " + num + " equivale a: " + n + "<br><br>");
+					return "";
+				} else if(n == num){
+					document.write("O Somatório de " + n + " equivale a: " + n);
+				} else if(n == 1){
+					document.write(" + " + n + "<br><br>");
+					return "";
+				} else {
+					document.write(" + " + n);
+				}
+				return impSomatorio(n-1);
+			}
+			
+			function soma(n){
+				if(n == 1){
+					return 1;
+				}
+				return n+soma(n-1);
+			}
+
+//			document.write(impSomatorio(num) + "O Somatório de " + num + " é: " + soma(num));
+			
+		</script>
+	</head>
+	<body>
+
+		<form name="f_recursivo" method="#" action="#" onsubmit="return valida()">
+		
+			<label>Informe um número de 1 a 10:<label><br>
+			<input type="int" name="f_numero" id="f_inumero" maxlength="2"><br><br>
+
+
+			<input type="submit" value="começar">
+			
+		</form>		
+		
+	</body>
+	<footer>
+
+
+	</footer>
+</html>

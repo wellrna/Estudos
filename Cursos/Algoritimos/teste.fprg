@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="XXX"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-01 01:08:38 "/>
+        <attribute name="created" value="WFhYO0RFU0tUT1AtMVFLQkVVVDsyMDIyLTA1LTAxOyIxMToyODowMSAiOzI1MzY="/>
+        <attribute name="edited" value="WFhYO0RFU0tUT1AtMVFLQkVVVDsyMDIyLTA1LTAxOyIwMTowODozOCAiOzY7MjY1Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="op" type="Integer" array="True" size="25"/>
+            <declare name="p, p1, p2, p3, p4, p5, i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="p" expression="0"/>
+            <assign variable="p1" expression="1"/>
+            <assign variable="p2" expression="2"/>
+            <assign variable="p3" expression="3"/>
+            <assign variable="p4" expression="4"/>
+            <assign variable="p5" expression="5"/>
+            <call expression="Armazena (p1, p2, p3, p4, p5, p, i, op)"/>
+            <output expression="&quot;p = &quot; &amp; Armazena (p1, p2, p3, p4, p5, p, i, op)" newline="True"/>
+            <output expression="&quot;op0 = &quot; &amp; op[0]" newline="True"/>
+            <output expression="&quot;op1 = &quot; &amp; op[1]" newline="True"/>
+            <output expression="&quot;op2 = &quot; &amp; op[2]" newline="True"/>
+            <output expression="&quot;op3 = &quot; &amp; op[3]" newline="True"/>
+        </body>
+    </function>
+    <function name="armazena" type="Integer" variable="pa">
+        <parameters>
+            <parameter name="pa1" type="Integer" array="False"/>
+            <parameter name="pa2" type="Integer" array="False"/>
+            <parameter name="pa3" type="Integer" array="False"/>
+            <parameter name="pa4" type="Integer" array="False"/>
+            <parameter name="pa5" type="Integer" array="False"/>
+            <parameter name="pa" type="Integer" array="False"/>
+            <parameter name="ia" type="Integer" array="False"/>
+            <parameter name="op" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="paa" type="Integer" array="False" size=""/>
+            <assign variable="pa" expression="0"/>
+            <output expression="&quot;pa = &quot;&amp; pa" newline="True"/>
+            <output expression="&quot;pa1 = &quot;&amp; pa1" newline="True"/>
+            <output expression="&quot;pa2 = &quot;&amp; pa2" newline="True"/>
+            <output expression="&quot;pa3 = &quot;&amp; pa3" newline="True"/>
+            <output expression="&quot;pa4 = &quot;&amp; pa4" newline="True"/>
+            <output expression="&quot;pa5 = &quot;&amp; pa5" newline="True"/>
+            <output expression="&quot;1a = &quot;&amp; ia" newline="True"/>
+            <for variable="ia" start="0" end="3" direction="inc" step="1">
+                <assign variable="pa" expression="ToInteger(ToString(pa)&amp;ToString(ia)&amp;ToString(pa)&amp;ToString(ia+1))"/>
+                <output expression="&quot;pa&quot; &amp; ia &amp; &quot; = &quot; &amp; pa" newline="True"/>
+                <assign variable="op[ia]" expression="pa"/>
+                <output expression="&quot;op&quot; &amp; ia &amp; &quot; = &quot; &amp; op[ia]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

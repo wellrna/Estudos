@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<title>Curso de Javascript</title>
+		<meta charset="UTF-8">
+
+<!--
+		<style>
+
+		</style>
+-->
+
+		<script>
+
+			document.write("<span style='font-size:20px'><span style='font-family: verdana, arial'>");
+			document.write("<p id=curso>CURSO DE JAVASCRIPT<br><br></p>");
+			document.getElementById("curso").style.color="#F00";
+			
+		</script>
+	</head>
+
+	<body onload="condicional()">  
+
+		<p id="cursobody">Aula CSS</p> 
+		<p id="cursobody1">Formatação condicional<br><BR></p> 
+
+
+		<script>
+
+			document.write(
+			  "<span style='font-size:20px'><span style='font-family: verdana, arial'>"
+			);
+
+			document.write("LÓGICA 3<br><BR>");
+
+			function condicional(){
+				let tds=document.getElementsByTagName("td");
+				let i;
+				document.getElementById("cursobody").style.color="#00f";
+				document.getElementById("cursobody").style.fontWeight="bold";
+				document.getElementById("cursobody").style.textDecoration="underline";
+				document.getElementById("cursobody1").style.color="#00f";
+				document.getElementById("cursobody1").style.textDecoration="underline";
+				for(i=0; i<tds.length; i++){
+					if(tds[i].innerHTML < 15){
+						tds[i].style.color="#F00";
+					};
+				};
+			};
+
+		</script>
+
+		<table width="400" border="1" cellspacing="0">
+			<tr>
+				<th>Produto</th><th>Quantidade</th>
+			</tr>
+			<tr>
+				<td>Mouse</td><td>5</td>
+			</tr>
+			<tr>
+				<td>Teclado</td><td>30</td>
+			</tr>
+			<tr>
+				<td>Monitor</td><td>10</td>
+			</tr>
+		</table>
+
+	</body>
+	<footer>
+
+
+	</footer>
+</html>

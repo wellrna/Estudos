@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="XXX"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-30 12:22:37 "/>
+        <attribute name="created" value="WFhYO0RFU0tUT1AtMVFLQkVVVDsyMDIyLTA0LTMwOyIxMjowNDozNCAiOzI1Mzg="/>
+        <attribute name="edited" value="WFhYO0RFU0tUT1AtMVFLQkVVVDsyMDIyLTA0LTMwOyIxMjoyMjozNyAiOzE7MjY0OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tamanho" type="Integer" array="False" size=""/>
+            <declare name="lista" type="String" array="True" size="10"/>
+            <assign variable="tamanho" expression="size(lista)"/>
+            <output expression="&quot;O tamanho da lista &#233; &quot; &amp; tamanho" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

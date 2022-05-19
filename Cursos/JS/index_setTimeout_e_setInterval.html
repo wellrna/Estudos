@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang=“pt-br”>
+	<head>
+		<title>Curso de Javascript</title>
+		<meta charset=“UTF-8”>
+		<p> === EXEMPLO ### === EXEMPLO ### === EXEMPLO ### === EXEMPLO ### === EXEMPLO ### === EXEMPLO ###</p></br></br>
+<!--		
+		<a href="#" id="ancora">
+
+		<script>
+//			window.location.href="#ancora"
+//este trecho comentado é para a tela rolar até esse ponto
+
+		</script>
+-->
+		<script>
+			
+			var timer=setTimeout(cfb,15000);
+			
+			function cfb(){
+				document.write("<span style='font-weight:bold'>Exemplo de setTimeout</span> - OBS: O parâmetro “tempo” é informado em milesegundos, ou seja, para configurar 5 segundos usamos o valor 5000, para configurar 1 segundo usamos os valor 1000.</br></br>");
+			}
+
+//OBS: O parâmetro “tempo” é informado em milesegundos, ou seja, para configurar 5 segundos usamos o valor 5000, para configurar 1 segundo usamos os valor 1000.
+
+			var cont=0;
+			
+			var timer1=setInterval(cfb1,5000);
+			
+			function cfb1(){
+				document.write(cont + " Exemplo de setInterval - OBS: O parâmetro “tempo” é informado em milesegundos, ou seja, para configurar 5 segundos usamos o valor 5000, para configurar 1 segundo usamos os valor 1000.</br></br>");
+				cont++;
+				if(cont == 10){
+					clearInterval(timer1);
+				}
+			}	
+
+
+
+
+		</script>
+	
+	</head>
+	<body>
+	
+	</body>
+</html>

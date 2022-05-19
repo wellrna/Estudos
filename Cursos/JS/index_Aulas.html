@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<title>Curso de Javascript</title>
+		<meta charset="UTF-8">
+		<script>
+			//<span style='font-size:14px'>;
+			document.write("<span style='font-size:20px'><span style='font-family: verdana, arial'>Canal Fessor Bruno");
+			
+			document.write("<p style='color:#F00'>Canal Fessor Bruno - Exemplo de HTML dentro JS</p>");
+			
+			document.write("500"-5+ '  "500"-5+" Esta forma está errada, não deveria haver o cálculo, foi o browser q corrigiu"</br></br>');
+			
+			document.write(500-5+ '  500-5+" Esta forma é a correta"');
+			
+		</script>
+	</head>
+	<body onload="cumprimento()">
+	
+		<script>
+		
+			document.write("<p>www.cfbcursos.com.br - texto dentro JS</p>");
+			
+		</script>
+		
+		<p>Curso de Javascript - texto no HTML sem JS</p>
+		
+		<script>
+		
+			document.write("<p>YouTube - texto dentro JS</p>");
+			
+		</script>
+
+		<p>Este texto é escrito em HTML - texto no HTML sem JS</p>
+		
+		<script>
+		
+			document.write("Marcação para comentários em JS <span style='color:#F00'>'//'</span> para linha individual ou <span style='color:#F00'>'/*' e '*/'</span> para um bloco e adicionar formatação CSS inline - partes em vermelho</br></br>");
+			document.write("Marcação para comentários em CSS <span style='color:#F00'>'/*' e '*/'</span> para um bloco e adicionar formatação CSS inline - partes em vermelho</br></br>");
+			document.write("Marcação para comentários em HTML <span style='color:#F00'>'<#!--'' >' e '<#--'' >'</span> para um bloco - retirar o #, apenas para conseguir exibir o comando e adicionar formatação CSS inline - partes em vermelho</br></br>");
+			document.write("var / let / const - usados para criar variáveis</br></br>");
+			document.write("console.log() - imprime mensagens na tela do console</br></br>");
+			document.write('Comando aplicado: console.log ("variável n = 1 + 1, então valor de n = "+(n=1+1)) - resultado no console</br></br>');
+			var n
+			console.log ("variável n = 1 + 1, então valor de n = "+(n=1+1));
+			document.write("caixas de mensagens: alert, prompt e confir</br></br>");
+			alert("Esta é uma mensagem do tipo alert - caixa de alerta");
+			var nome;
+			nome=prompt("Por favor digite seu nome - mensagem do tipo prompt","Digite seu nome aqui");
+			document.write(nome +" - solicita informação q foi armazenado em variável</br></br>");
+			var opc;
+			opc=confirm("Deseja continuar? - mensagem do tipo confirm");
+			document.write(opc +" - retorna valor boleano q foi armazenado em variável</br></br>");
+			document.write(opc +" - retorna valor boleano q foi armazenado em variável</br></br>");
+			document.write('Uso switch / case</br>switch(expressão){</br>'+
+'	case valor 1:</br>'+
+		//comandos
+'		(comando - break;)</br>'+
+'	case valor 2:</br>'+
+		//comandos
+'		(comando - break;)</br>'+
+'	case valor 3:</br>'+
+		//comandos
+'		(comando - break;)</br>'+
+'	default:</br>'+
+'		(comando caso não seja as opções descritas acima;)</br>'+
+		//comandos
+'}</br></br>');
+			var pos=5
+			switch(pos){
+				case 1:
+					document.write("Campeão</br></br>");
+					break;
+				case 2:
+					document.write("Segundo lugar</br></br>");
+					break;
+				case 3:
+					document.write("Terceiro lugar</br></br>");
+					break;
+				default:
+					document.write("Valor informado= "+pos+" Não subiu no pódio</br></br>");
+			};
+			
+			document.write("Método		Descrição																				Exemplo</br>");
+			document.write("concat()	Junta os elementos de dois ou mais arrays e retorna uma cópia com os elementos juntos	var ar1 = [“Carro”, “Moto”]; var ar2 = [“Navio”, “Patins”, “Skate”]; var transp = ar1.concat(ar2);</br></br>");
+			var ar1 = ["Carro", "Moto"];
+			var ar2 = ["Navio", "Patins", "Skate"];
+			document.write("situação inicial ar1 = "+ar1+"</br></br>");
+			document.write("situação inicial ar2 = "+ar2+"</br></br>");
+			var transp = ar1.concat(ar2);
+			document.write("var transp = "+transp+"</br></br>");
+			console.log(transp);
+			
+			document.write("indexOf()	Procura por um elemento específico no array e retorna a sua posição						var cores = [“Verde”, “Azul”, “Amarelo”, “Rosa”]; var pos = cores.indexOf(“Azul”); //Retorna 1</br></br>");
+			var cores = ["Verde", "Azul", "Amarelo","Rosa"];
+			document.write("situação inicial cores = "+cores+"</br></br>");
+			var pos = cores.indexOf("Azul"); //Retorna 1
+			document.write("var pos = "+pos+"</br></br>");
+			console.log(pos);
+			
+			document.write("join()		Junta todos os elementos de um array em uma string										var cores = [“Verde”, “Azul”, “Amarelo”,“Rosa”]; var paleta = cores.join();</br></br>");
+			var cores = ["Verde", "Azul", "Amarelo","Rosa"];
+			document.write("situação inicial cores = "+cores+"</br></br>");
+			var paleta = cores.join();
+			document.write("var paleta = "+paleta+" - não é mais array</br></br>");
+			console.log(paleta);
+			
+			document.write("push()		Insere um novo elemento no final do array												var cores = [“Verde”, “Azul”, “Amarelo”,“Rosa”]; cores.push(“Vermelho”);</br></br>");
+			var cores = ["Verde", "Azul", "Amarelo","Rosa"];
+			document.write("situação inicial cores = "+cores+"</br></br>");
+			cores.push("Vermelho");
+			document.write("nova situação cores = "+cores+"</br></br>");
+			console.log(cores);
+			
+			document.write("pop()		Remove o último elemento do array														var cores = [“Verde”, “Azul”, “Amarelo”,“Rosa”]; cores.pop();</br></br>");
+			var cores = ["Verde", "Azul", "Amarelo","Rosa"];
+			document.write("situação inicial cores = "+cores+"</br></br>");
+			cores.pop();
+			document.write("nova situação cores = "+cores+"</br></br>");
+			console.log(cores);
+			
+			document.write("reverse()	Inverte a ordem dos elementos do array													cores.reverse();</br></br>");
+			var cores = ["Verde", "Azul", "Amarelo","Rosa"];
+			document.write("situação inicial cores = "+cores+"</br></br>");
+			cores.reverse();
+			document.write("nova situação cores = "+cores+"</br></br>");
+			console.log(cores);
+			
+			document.write("shift()		Remove o primeiro elemento do array														var cores = [“Verde”, “Azul”, “Amarelo”,“Rosa”]; cores.shift();</br></br>");
+			var cores = ["Verde", "Azul", "Amarelo","Rosa"];
+			document.write("situação inicial cores = "+cores+"</br></br>");
+			cores.shift();
+			document.write("nova situação cores = "+cores+"</br></br>");
+			console.log(cores);
+			
+			document.write("sort()		Ordena os elementos do array em ordem crescente											cores.sort();</br></br>");
+			var cores = ["Verde", "Azul", "Amarelo","Rosa"];
+			document.write("situação inicial cores = "+cores+"</br></br>");
+			cores.sort();
+			document.write("nova situação cores = "+cores+"</br></br>");
+			console.log(cores);
+			
+			document.write("toString()	Converte um array em string e retorna essa string										var cores = [“Verde”, “Azul”, “Amarelo”,“Rosa”]; cores.toString();</br></br>");
+			var cores = ["Verde", "Azul", "Amarelo","Rosa"];
+			document.write("situação inicial cores = "+cores+"</br></br>");
+			cores.toString();
+			document.write("nova situação cores = "+cores+"</br></br>");
+			console.log(cores.toString());
+
+			document.write("unshift()	Insere um novo elemento no início do array												var cores = [“Verde”, “Azul”, “Amarelo”,“Rosa”]; cores.unshift(“Vermelho”);</br></br>");
+			var cores = ["Verde", "Azul", "Amarelo","Rosa"];
+			document.write("situação inicial cores = "+cores+"</br></br>");
+			cores.unshift("Vermelho");
+			document.write("nova situação cores = "+cores+"</br></br>");
+			console.log(cores);
+			
+			document.write("splice()	Corta o array em um ponto indicado.														var num = [0,1,2,3,4,5,6,7,8,9]; num.splice(2,4); //Remove 4 elementos a partir do índice 2 //Resultado: [0,1,2,3,6,7,8,9]</br></br>");
+			var num = [0,1,2,3,4,5,6,7,8,9];
+			document.write("situação inicial num = "+num+"</br></br>");
+			num.splice(2,4); //Remove 4 elementos a partir do índice 2 //Resultado: [0,1,6,7,8,9]
+			document.write("nova situação num = "+num+"</br></br>");
+			console.log(cores);
+			
+			document.write("while (condição) {comandos} - executa até a condição ser satisfeita, se a condição for satisfeita antes da primeira execução os comandos não são executados - while(cont < 10)</br></br>");
+			var cont;
+			cont=0;
+			document.write("situação inicial cont = "+cont+"</br>");
+			while(cont < 10){
+				document.write("CFB "+cont+"<br>");
+				cont++;
+			}
+			document.write("nova situação cont = "+cont+"</br></br>");
+
+			document.write("do {comandos} while (condição) - executa até a condição ser satisfeita, se a condição for satisfeita antes da primeira execução os comandos serão executados pelo menos 1 vez - while(cont < 10)</br></br>");
+			var cont;
+			cont=25;
+			document.write("situação inicial cont = "+cont+"</br>");
+			do{
+				document.write("CFB "+cont+"<br>");
+				cont++;
+			}while(cont<10);
+			document.write("nova situação cont = "+cont+"</br></br>");
+			
+			try{
+				alerrt("CFB");
+			}catch(erro){
+				document.write("Houve um erro no bloco try - Como usar a estrututa try/catch/finally - o finally é opcional<br>");
+				document.write("Erro gerado: <span style='color:#F00'>"+erro.message+"</span><br><br>");
+//			}finally{
+				document.write("Comando try finalizado<br><br>");
+		}
+		</script>
+
+		<p id="texto">getElementById - Exemplo de utilização cor da fonte - Curso de Javascript</br></br></p>
+		
+		<script>
+		
+			let tx;
+			tx=document.getElementById("texto");
+			tx.style.color="#FF00FF";
+
+		</script>
+		
+			<p id="texto1">Curso de Javascript - 1</br></br></p>		
+
+		<script>
+		
+			let tx1;
+			tx1=document.getElementById("texto1");
+			tx1.style.color="#FF4000";
+			document.getElementById("texto1").innerHTML="getElementById e innerHTML juntos - Exemplo de utilização troca texto e cor fonte</br></br>";
+
+		</script>
+		
+			<p id="texto2">Curso de Javascript - 2</p>
+			<p></br></p>		
+
+		<script>
+		
+			let tx2;
+			tx2=document.getElementById("texto2").innerHTML;
+//			tx1.style.color="#FF4000";
+			document.write("Texto da Tag p: " + tx2 + " - getElementById e innerHTML juntos - Exemplo de utilização para armazenar Tag p em variável tx2</br></br>");
+
+
+		</script>
+		
+		<p>Canal Fessor Bruno</p>
+		<p>Curso de Javascript</p>
+		<p>www.cfbcursos.com.br</p>
+		<p>www.youtube.com.br22</p>
+		
+		<script>
+
+			let tagP;
+			tagP=document.getElementsByTagName("p")[12];
+			document.write(tagP.innerHTML+" - getElementsByTagName(nomeTag)[númeroTag] - Exemplo de utilização onde o número tag segue mesmo conceito de array. - Outra opção é colocar o endereçãmento do array na variável. Ex.: document.write(nomeVariável[númeroTagp])</br></br>");
+
+			document.write("<span style='font-weight:bold'>querySelectorAll()</span></br>");
+			document.write("O querySelectorAll() é um método que retorna os elementos do documento que correspondem a uma classe de CSS, como um objeto dentro de uma lista de objetos (array). Uma das grandes vantagens de usar o método querySelectorAll() é que podemos nos referenciar tanto a tags como classes CSS.</br></br>");
+			document.write("Informações:</br>");
+			document.write("Apostila páginas 50 a 52</br></br>");
+			document.write("https://www.w3schools.com/jsref/met_document_queryselectorall.asp</br>");
+			document.write("https://www.w3schools.com/cssref/css_selectors.asp </br>");
+			document.write("http://cfbcursos.com.br/javascript-26-queryselectorall/</br></br>");
+
+		</script>
+
+		<form name="curso" action="#" method="post">
+		<label>Nome</label><br>
+		<input type="text" name="fNome" value="Digite seu nome"><br><br>
+		<label>Senha</label><br>
+		<input type="password" name="fSenha" value="****"><br><br>
+		<input type="submit" name="btEnviar" value="Enviar"><br><br>
+		</form>
+		<script>
+			tag=document.forms["curso"];
+			document.write(tag.elements["fNome"].value+" - "+tag.elements["fSenha"].value+"<br><br>");
+
+			document.write("<span style='font-weight:bold'>Métodos Date()</span></br>");
+			var data=new Date();
+			var dia=data.getDate();
+			var mes=data.getMonth()+1;
+			var ano=		data.getFullYear();
+			document.write(dia + "/" + mes + "/" + ano + "<br><br>");
+			var meses=new Array("Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+			var dia=data.getDate();
+			var mes=data.getMonth();
+			var ano=data.getFullYear();
+			document.write("São Paulo, " + dia + " de " + meses[mes] + " de " + ano + "<br><br>");
+			document.write("<span style='font-weight:bold'>Método - Descrição - Exemplo</span></br>");
+			document.write("getDay(); - Retorna o dia da semana, domingo=0, segunda=1 - Exemplo: var diaSem=data.getDay();</br>");
+			document.write("getDate(); - Retorna o dia do mês - Exemplo: var dia=data.getDate();</br>");
+			document.write("getMonth(); - Retorna o mês, janeiro=0, fevereiro=1 - Exemplo: var mes=data.getMonth();</br>");
+			document.write("getFullYear(); - Retorna o ano com 4 dígitos, ex: 2015 - Exemplo: var ano=data.getFullYear();</br>");
+			document.write("getHours(); - Retorna a hora - Exemplo: var hora=data.getHours();</br>");
+			document.write("getMinutes(); - Retorna os minutos - Exemplo: var minutos=data.getMinutes();</br>");
+			document.write("getSeconds(); - Retorna os segundos - Exemplo: var segundos=data.getSeconds();</br>");
+			document.write("toDateString(); - Retorna a data por extenso, padrão EUA - Exemplo: var dataTexto=data.toDateString();</br>");
+			document.write("toDateString(); - Retorna a data no formato 16/12/2015 - Exemplo: var dataPadrao=data.toLocaleDateString();</br>");
+			document.write("toLocaleString(); - Retorna a data e a hora 16/12/2015 23:13:00 - Exemplo: var dataHoraTexto=data.toLocaleString();</br></br>");
+
+			document.write("<span style='font-weight:bold'>Métodos Math</span></br>");
+			var vmath=Math.random();
+			var vmath1=vmath*10
+			var vmath2=vmath*60
+			document.write(vmath+" - Math.random() - Retorna um número aleatório entre 0 e 1</br>");
+			document.write(vmath1+" - Math.random()*10 - Retorna um número aleatório multiplicado por 10</br>");
+			document.write(vmath2+" - Math.random()*60 - Retorna um número aleatório multiplicado por 60</br>");
+			document.write(Math.E+" - Math.E - Retorna o número Euler</br>");
+			document.write(Math.PI+" - Math.PI - Retorna o número PI</br>");
+			document.write(Math.SQRT2+" - Math.SQRT2 - Retorna a raiz quadrada de 2</br>");
+			document.write(Math.SQRT1_2+" - Math.SQRT1_2 - Retorna a raiz quadrada de ½</br>");
+			document.write(Math.LN2+" - Math.LN2 - Retorna o logaritmo natural de 2</br>");
+			document.write(Math.LN10+" - Math.LN10 - Retorna o logaritmo natual de 10</br>");
+			document.write(Math.LOG2E+" - Math.LOG2E - Retorna base 2 do logaritmo de E</br>");
+			document.write(Math.LOG10E+" - Math.LOG10E - Retorna base decimal do logaritmo de E</br>");
+			document.write(Math.abs(-2)+" - Math.abs(x) - Retorna o valor absoluto de X - Ex. x =-2</br>");
+			document.write(Math.acos(2)+" - Math.acos(x) - Retorna o arco cosseno de X - Ex. x = 2</br>");
+			document.write(Math.asin(2)+" - Math.asin(x) - Retorna o arco seno de X - Ex. x = 2</br>");
+			document.write(Math.atan(2)+" - Math.atan(x) - Retorna o arco tangente de X como um valor numérico entre PI/2 e PI/2 radiano - Ex. x = 2</br>");
+			document.write(Math.atan2(2,3)+" - Math.atan2(y,x) - Retorna o arco tangente do quociente dos argumentos y e x - Ex. x = 3, y = 2</br>");
+			document.write(Math.ceil(2.01)+" - Math.ceil(x) - Retorna o valor de X arredondado para cima - Ex. x = 2.01</br>");
+			document.write(Math.cos(2)+" - Math.cos(x) - Retorna o cosseno de x em radianos - Ex. x = 2</br>");
+			document.write(Math.exp(2)+" - Math.exp(x) - Retorna o valor de Ex - Ex. x = 2</br>");
+			document.write(Math.floor(2.99)+" - Math.floor(x) - Retorna o valor de X arredondado para baixo - Ex. x = 2.99</br>");
+			document.write(Math.log(2)+" - Math.log(x) - Retorna o logaritmo natural (base E) de x - Ex. x = 2</br>");
+			document.write(Math.max(2,3,4,5,6)+" - Math.max(x,y,z,…,n) - Retorna o maior valor dos argumentos - Ex. intervalo de 2 a 6</br>");
+			document.write(Math.min(2,3,4,5,6)+" - Math.min(x,y,z,…,n) - Retorna o menor valor dos argumentos - Ex. intervalo de 2 a 6</br>");
+			document.write(Math.pow(2,3)+" - Math.pow(x,y) - Retorna o valor de x elevado a y - Ex. x = 2, y = 3</br>");
+			document.write(Math.round(2.49)+" - Math.round(x) - Retorna o inteiro mais próximo, arredonda para cima ou para baixo - Ex. x = 2.49</br>");
+			document.write(Math.round(2.50)+" - Math.round(x) - Retorna o inteiro mais próximo, arredonda para cima ou para baixo - Ex. x = 2.50</br>");
+			document.write(Math.round(2.51)+" - Math.round(x) - Retorna o inteiro mais próximo, arredonda para cima ou para baixo - Ex. x = 2.51</br>");
+			document.write(Math.sin(2)+" - Math.sin(x) - Retorna o seno de x em radianos - Ex. x = 2</br>");
+			document.write(Math.sqrt(4)+" - Math.sqrt(x) - Retorna a raiz quadrada de x - Ex. x = 4</br>");
+			document.write(Math.tan(2)+" - Math.tan(x) - Retorna a tangente do ângulo x - Ex. x = 2</br></br>");
+
+			document.write("<span style='font-weight:bold'>function</span></br>");
+			var alunos=new Array();
+			var aluno=new Array();
+			var i, nota;
+
+			function notas(n1, n2, n3, n4){
+				var soma=n1+n2+n3+n4;
+				if(soma >= 60){
+					document.write("<span style='color:#00F'>Aprovado</span><br>");
+				}else{
+					document.write("<span style='color:#F00'>Reprovado</span><br>");
+				}
+				return soma;
+			}
+					
+			aluno=["Godofreudo",20,10,15,5];
+			alunos[0]=aluno;
+			aluno=["Filisberta",20,20,10,30];
+			alunos[1]=aluno;
+			aluno=["Craudiomiro",5,5,7,2];
+			alunos[2]=aluno;
+			aluno=["Nevernilda",9,15,15,20];
+			alunos[3]=aluno;
+			aluno=["Jubisberto",20,20,30,30];
+			alunos[4]=aluno;
+			aluno=["Franclara",5,15,10,20];
+			alunos[5]=aluno;
+			aluno=["Admirson",15,15,25,25];
+			alunos[6]=aluno;
+			aluno=["Romicreide",20,19,30,25];
+			alunos[7]=aluno;
+					
+			for(i=0; i<alunos.length; i++){
+				document.write("Aluno: " + alunos[i][0] + " = ");
+				notas(alunos[i][1], alunos[i][2], alunos[i][3], alunos[i][4]);	// AQUI ENTRA O RESULTADO DO IF NA FUNCTION
+			}
+			document.write("<br>");
+
+			for(i=0; i<alunos.length; i++){
+				document.write("Aluno: "+alunos[i][0]+ " = ");
+				nota=notas(alunos[i][1], alunos[i][2], alunos[i][3], alunos[i][4]);	// AQUI ENTRA O RESULTADO DO IF NA FUNCTION
+				document.write(" - Nota: " + nota + "<br>");  //AQUI EMTRA O RETURN SOLICITADO NA FUNCTION
+			}
+			document.write("<br>");
+			
+						var numeros=new Array();
+			var resultado;
+			
+			function media(nums){
+				var tam=nums.length;
+				var soma=0;
+				for(i=0; i< tam; i++){
+					soma+=nums[i];
+				}
+
+				return Math.floor(soma/tam);
+			}
+			
+			resultado=media([10,2,5,30,25,19]);
+			
+			document.write("Média: " + resultado+"<br><br>");
+
+			document.write("<span style='font-weight:bold'>Eventos</span> - Para mais informações e outros controles de enventos acesse: http://cfbcursos.com.br/javascript-32-eventos/</br></br>");
+			document.write("<span style='font-weight:bold'>addEventListener/span> - Veja também: http://cfbcursos.com.br/javascript-33-addeventlistener/</br></br>");
+			document.write("<span style='font-weight:bold'>removeEventListener/span> - Veja também: http://cfbcursos.com.br/javascript-34-1-removeeventlistener/</br></br>");
+
+			function cumprimento(){
+				var data=new Date();
+				hora=data.getHours();
+				if((hora >= 6)&&(hora <= 12)){
+					alert("Bom dia");
+				}else if((hora > 12)&&(hora < 18)){
+					alert("Boa tarde");
+				}else if(hora >= 18){
+					alert("Boa noite");
+				}else{
+					alert("Boa madrugada");
+				}
+			}
+			
+			function msg1(){
+				alert("Você clicou no botão");
+			}
+			
+			function msg2(){
+				alert("Cursos passou sobre a imagem");
+			}
+
+		</script>
+	
+		<input type="button" value="Clique-me" onclick="msg1()">
+		</br></br>
+		<img src="#" alt="Falha no carregamento - passe o mouse na imagem" onmouseover="msg2()">
+		</br></br>
+		
+		<script>
+
+			function msg3(){
+				alert("Seja bem vindo 1");
+			}
+			
+			window.addEventListener("load",msg3);
+		
+	//		function msg1(){ //este exemplo não funciona pq o evento está definido antes da criação do botão. ex correto abaixo
+	//			alert("Seja bem vindo");
+	//		} //este exemplo não funciona pq o evento está definido antes da criação do botão. ex correto abaixo
+	//		
+	//		var b1=document.getElementById("bt1"); //este exemplo não funciona pq o evento está definido antes da criação do botão. ex correto abaixo
+	//		b1.addEventListener("click",msg1);	//este exemplo não funciona pq o evento está definido antes da criação do botão. ex correto abaixo
+
+			function load(){
+				var b1=document.getElementById("bt1");
+				b1.addEventListener("click",msg4);				
+			}
+					
+			function msg4(){
+				alert("Seja bem vindo 2");
+			}
+					
+			window.addEventListener("load",load);
+			
+		</script> 
+	
+		<input type="button" value="Clique-me" id="bt1"> <!-- esta linha faz parte do exemplo que funciona e do não funcionou  -->
+		</br></br>
+
+		<style>
+			#jogador{
+				position:absolute;
+				left:0px;
+				top:0px;
+				width:50px;
+				height:50px;
+				background-color:#000;
+			}
+		</style>
+	
+
+		<script>
+			var px=0;
+			var py=0;
+					
+			function load1(){
+				document.addEventListener("keydown",tecla);
+			}
+					
+			function tecla(){
+				var jg=document.getElementById("jogador");
+				var vtecla = event.keyCode;
+				if(vtecla==37){
+					//Esquerda
+					px-=10;
+					jg.style.left=px+"px";
+				}else if(vtecla==39){
+					//Direita
+					px+=10;
+					jg.style.left=px+"px";
+				} else if(vtecla==38){
+					//Cima
+					py-=40;
+					jg.style.top=py+"px";
+				}else if(vtecla==40){
+					//baixo
+					py+=40;
+					jg.style.top=py+"px";
+				} else if(vtecla==13){
+					alert("Tecla <<ENTER>> pressionada. \n\n O evento será removido. \n\n");
+					document.removeEventListener("keydown",tecla);
+				}else{
+					alert("Tecla pressionada: "+vtecla);
+				}
+			}
+					
+			window.addEventListener("load", load1);		
+
+		</script>
+		<div id="jogador"></div>
+		<p> Vá ao início da página e use as setas para movimentar o quadrado </p></br></br>
+<!--		
+		<a href="#" id="ancora">
+
+		<script>
+//			window.location.href="#ancora"
+//este trecho comentado é para a tela rolar até esse ponto
+
+		</script>
+-->
+		<script>
+
+//			var timer=setTimeout(cfb,15000);
+			
+//			function cfb(){
+//				document.write("<span style='font-weight:bold'>Exemplo de setTimeout</span> - OBS: O parâmetro “tempo” é informado em milesegundos, ou seja, para configurar 5 segundos usamos o valor 5000, para configurar 1 segundo usamos os valor 1000.</br></br>");
+//			}
+
+//OBS: O parâmetro “tempo” é informado em milesegundos, ou seja, para configurar 5 segundos usamos o valor 5000, para configurar 1 segundo usamos os valor 1000.
+
+//			var cont=0;
+			
+//			var timer1=setInterval(cfb1,5000);
+			
+//			function cfb1(){
+//				document.write("Exemplo de setInterval - OBS: O parâmetro “tempo” é informado em milesegundos, ou seja, para configurar 5 segundos usamos o valor 5000, para configurar 1 segundo usamos os valor 1000.</br></br>");
+//				cont++;
+//				if(cont == 10){
+//					clearInterval(timer1);
+//				}
+//			}
+
+				document.write("<span style='font-weight:bold'>Exemplo de setInterval para trocar cor do fundo </span> - OBS: O parâmetro “tempo” é informado em milesegundos, ou seja, para configurar 5 segundos usamos o valor 5000, para configurar 1 segundo usamos os valor 1000.</br></br>");
+			
+			var cores=["#F00","#0F0","#00F","#FF0","#0FF","#F0F","#000","#FFF"];
+			var i=0;
+			
+			var timer;  //=setInterval(mudaCorFundo,1000);
+			
+			function mudaCorFundo(){
+				document.body.style.backgroundColor=cores[i];
+				i++;
+				if(i >= cores.length){
+					i=0;
+				}
+			}
+
+			function iniciar(){		
+				clearInterval(timer);
+				timer=setInterval(mudaCorFundo,1000);
+			}
+			
+			function parar(){
+				clearInterval(timer);
+				document.getElementById("bt_ini").value="Continuar troca";
+			}
+
+		</script>
+
+		<input type="button" value="Iniciar troca" id="bt_ini" onclick="iniciar()"><br><br>
+		<input type="button" value="Parar troca" onclick="parar()">
+
+		<script>
+
+
+
+		</script>
+
+	</body>
+</html>

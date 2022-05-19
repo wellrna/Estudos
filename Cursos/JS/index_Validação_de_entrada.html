@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang=“pt-br”>
+	<head>
+		<title>Curso de Javascript</title>
+		<meta charset=“UTF-8”>
+	<script>
+
+
+		function valida(){
+
+			if(document.f_aula.f_nome.value == ""){
+				alert("Digite o nome");
+				document.getElementById("f_inome").focus();
+				return false;
+			}
+				
+			if(document.f_aula.f_senha.value == ""){
+				alert("Digite a senha");
+				document.getElementById("f_isenha").focus();
+				return false;
+			}
+				
+			let data=new Date();
+			let dt=new Array;
+			let aux=document.f_aula.f_data.value;
+			dt=aux.split("-");
+			dt1=dt;
+			dt2=aux.split(" ");
+			dt3=aux.split(":");
+			dt4=aux.split("/");
+			dt5=aux.split("");
+			dt6=aux.split("-");
+			console.log("data conteúdo: "+data);
+			console.log("data length: "+data.length);
+			console.log("data typeof: "+typeof(data));
+			console.log("data[0] typeof: "+typeof(data[0]));
+			console.log("data[1] typeof: "+typeof(data[1]));
+			console.log("data[2] typeof: "+typeof(data[2]));
+			console.log("soma data: " + (data[0] + data[1] + data[2]));
+			console.log("dt conteúdo: "+dt);
+			console.log("dt length: "+dt.length);
+			console.log("dt typeof: "+typeof(dt));
+			console.log("dt[0] typeof: "+typeof(dt[0]));
+			console.log("dt[1] typeof: "+typeof(dt[1]));
+			console.log("dt[2] typeof: "+typeof(dt[2]));
+			console.log("soma dt: " + (dt[0] + dt[1] + dt[2]));
+			dt1[0] = parseInt(dt1[0], 10);
+			dt1[1] = parseInt(dt1[1], 10);
+			dt1[2] = parseInt(dt1[2], 10);
+			console.log("dt1 conteúdo: "+dt1);
+			console.log("dt1 length: "+dt1.length);
+			console.log("dt1 typeof: "+typeof(dt1));
+			console.log("dt1[0] typeof: "+typeof(dt1[0]));
+			console.log("dt1[1] typeof: "+typeof(dt1[1]));
+			console.log("dt1[2] typeof: "+typeof(dt1[2]));
+			console.log("soma dt1: " + (dt1[0] + dt1[1] + dt1[2]));
+			console.log("dt2 conteúdo: "+dt2);
+			console.log("dt2 length: "+dt2.length);
+			console.log("dt2 typeof: "+typeof(dt2));
+			console.log("dt3 conteúdo: "+dt3);
+			console.log("dt3 length: "+dt3.length);
+			console.log("dt3 typeof: "+typeof(dt3));
+			console.log("dt4 conteúdo: "+dt4);
+			console.log("dt4 length: "+dt4.length);
+			console.log("dt4 typeof: "+typeof(dt4));
+			console.log("dt5 conteúdo: "+dt5);
+			console.log("dt5 length: "+dt5.length);
+			console.log("dt5 typeof: "+typeof(dt5));
+			console.log("dt6 conteúdo: "+dt6);
+			console.log("dt6 length: "+dt6.length);
+			console.log("dt6 typeof: "+typeof(dt6));
+
+//			if( ((dt[2] < 1) || (dt[2] > 31)) ){
+//				alert("Digite uma data válida - dia inválido");
+//				document.getElementById("f_idata");
+//				return false;
+//			} else if( ((dt[1] < 1) || (dt[1] > 12)) ){
+//				alert("Digite uma data válida - mês inválido");
+//				document.getElementById("f_idata");
+//				return false;
+//			} else
+			if( ((dt[0] < data.getFullYear()-150) || (dt[0] > data.getFullYear())) ){
+				alert("Digite uma data válida - ANO inválido - Digite um ano entre "+(data.getFullYear()-150)+" - "+data.getFullYear());
+				document.getElementById("f_idata");
+				return false;
+			}
+					
+			var vm=document.f_aula.f_email.value;
+			if(vm.search("@")==-1){
+				alert("Digite um e-mail válido");
+				document.getElementById("f_iemail").focus();
+				return false;
+			}
+		}
+			
+	</script>
+	</head>
+	<body>
+
+		<form name="f_aula" method="#" action="#" onsubmit="return valida()">
+		
+			<label>Nome:<label><br>
+			<input type="text" name="f_nome" id="f_inome" maxlength="50"><br><br>
+
+			<label>Senha:<label><br>
+			<input type="password" name="f_senha" id="f_isenha" minlength="6" maxlength="20"><br><br>
+			
+			<label>Data Nascimento:<label><br>
+			<input type="date" name="f_data" id="f_idata" maxlength="10"><br><br>
+			
+			<label>e-mail:<label><br>
+			<input type="text" name="f_email" id="f_iemail" maxlength="50"><br><br>	
+<!--
+			<button type="submit">Gravar</button>
+			</input>
+-->
+			<input type="submit" value="gravar">
+
+		</form>
+	
+	</body>
+</html>

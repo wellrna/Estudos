@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="XXX"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-29 11:48:05 "/>
+        <attribute name="created" value="WFhYO0RFU0tUT1AtMVFLQkVVVDsyMDIyLTA0LTI5OyIxMToyMToxNyAiOzI1NDU="/>
+        <attribute name="edited" value="WFhYO0RFU0tUT1AtMVFLQkVVVDsyMDIyLTA0LTI5OyIxMTo0ODowNSAiOzE7MjY1OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, resto" type="Integer" array="False" size=""/>
+            <output expression="&quot;Informe o n&#250;mero:&quot;" newline="True"/>
+            <input variable="num"/>
+            <assign variable="resto" expression="num % 5"/>
+            <if expression="resto = 0">
+                <then>
+                    <output expression="&quot;O n&#250;mero &quot; &amp; num &amp; &quot; &#233; multiplo de 5&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;O n&#250;mero &quot; &amp; num &amp; &quot; n&#227;o &#233; multiplo de 5&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

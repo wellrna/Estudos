@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="XXX"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-30 12:20:01 "/>
+        <attribute name="created" value="WFhYO0RFU0tUT1AtMVFLQkVVVDsyMDIyLTA0LTMwOyIxMjowNDozNCAiOzI1Mzg="/>
+        <attribute name="edited" value="WFhYO0RFU0tUT1AtMVFLQkVVVDsyMDIyLTA0LTMwOyIxMjoyMDowMSAiOzc7MjY0NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tamanho, conta" type="Integer" array="False" size=""/>
+            <declare name="confirma, operrada" type="String" array="False" size=""/>
+            <declare name="lista" type="String" array="True" size="5"/>
+            <declare name="frequencia" type="String" array="True" size="5"/>
+            <assign variable="frequencia[0]" expression="&quot;&quot;"/>
+            <assign variable="frequencia[1]" expression="&quot;a&quot;"/>
+            <assign variable="frequencia[2]" expression="&quot;a&quot;"/>
+            <assign variable="frequencia[3]" expression="&quot;a&quot;"/>
+            <assign variable="frequencia[4]" expression="&quot;a&quot;"/>
+            <assign variable="lista[0]" expression="&quot;Antonio&quot;"/>
+            <assign variable="lista[1]" expression="&quot;Aparecida&quot;"/>
+            <assign variable="lista[2]" expression="&quot;Beatriz&quot;"/>
+            <assign variable="lista[3]" expression="&quot;Bianca&quot;"/>
+            <assign variable="lista[4]" expression="&quot;Cassia&quot;"/>
+            <assign variable="conta" expression="0"/>
+            <assign variable="confirma" expression="&quot;n&quot;"/>
+            <assign variable="operrada" expression="&quot;&quot;"/>
+            <assign variable="tamanho" expression="size(lista)"/>
+            <while expression="conta &lt; tamanho">
+                <output expression="operrada &amp;&#13;&#10;lista[conta] &amp; &quot; est&#225; presente? (digite s para sim ou n para n&#227;o)&quot;" newline="True"/>
+                <input variable="confirma"/>
+                <if expression="confirma=&quot;s&quot; || confirma=&quot;n&quot;">
+                    <then>
+                        <if expression="confirma=&quot;s&quot;">
+                            <then>
+                                <assign variable="frequencia[conta]" expression="&quot;Presente&quot;"/>
+                            </then>
+                            <else>
+                                <assign variable="frequencia[conta]" expression="&quot;Ausente&quot;"/>
+                            </else>
+                        </if>
+                        <assign variable="conta" expression="conta + 1"/>
+                        <assign variable="operrada" expression="&quot;&quot;"/>
+                    </then>
+                    <else>
+                        <assign variable="operrada" expression="&quot;Op&#231;&#227;o informada &#233; inv&#225;lida!!!   -   &quot;"/>
+                    </else>
+                </if>
+            </while>
+            <assign variable="conta" expression="0"/>
+            <output expression="&quot;LISTA FINAL DA CHAMADA&quot;" newline="True"/>
+            <while expression="conta &lt; tamanho">
+                <output expression="lista[conta] &amp; &quot; - est&#225; &quot; &amp; frequencia[conta]&amp;&quot;!&quot;" newline="True"/>
+                <assign variable="conta" expression="conta + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

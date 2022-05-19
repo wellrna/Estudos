@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang=“pt-br”>
+	<head>
+		<title>Curso de Javascript</title>
+		<meta charset=“UTF-8”>
+
+<!--
+		<style>
+
+		</style>
+-->
+
+		<script>
+
+			document.write("<span style='font-size:20px'><span style='font-family: verdana, arial'>");
+			document.write("<span style='font-weight:bold'><br>ORDENAR ARRAY ALFANUMÉRICO<br><br><br></span>");
+
+			let nomes = [ "Matheus", "Pedro", "P3dro", "Maria", "Mar1a", "Alan", "Al4n", "Alana", "A1ana", "Alaor", "Ala0r", "Luan", "Marta", "Nair", "Berenice", "Carlos", "Carlo5", "Roberto", "Salma", "Daniel", "Fernanda", "Gabriela", "Heitor", "Jaqueline", "Katia", "Patrícia", "Oneide" ];
+
+			document.write("<span style='font-weight:bold'><br>INFORMAÇÕES ARRAY<br><br></span>");
+			document.write("Array sem ordem: " + nomes + "<br>");
+			document.write("Tamanho array: " + nomes.length + "<br><br>");
+
+			nomes.sort();
+			document.write("Array ordenado: " + nomes + "<br>");
+
+			document.write("<span style='font-weight:bold'><br><br>ORDENAR OBJETOS<br><br><br></span>");
+
+			let pessoas = [
+			  {   nome: "Matheus", idade: 29, cidade: "São Paulo"
+			  },
+			  {
+				  nome: "Pedro", idade: 18, cidade: "Osasco"
+			  },
+			  {
+				  nome: "Maria", idade: 40, cidade: "Salvador"
+			  },
+			  {
+				  nome: "Alan", idade: 63, cidade: "Manaus"
+			  },
+			  {
+				  nome: "Alana", idade: 32, cidade: "Macapá"
+			  },
+			  {
+				  nome: "Alaor", idade: 33, cidade: "Mirassol"
+			  },
+			  {
+				  nome: "P3dro", idade: 18, cidade: "Osasco"
+			  },
+			  {
+				  nome: "Mar1a", idade: 40, cidade: "Salvador"
+			  },
+			  {
+				  nome: "Al4n", idade: 63, cidade: "Manaus"
+			  },
+			  {
+				  nome: "A1ana", idade: 32, cidade: "Macapá"
+			  },
+			  {
+				  nome: "Ala0r", idade: 33, cidade: "Mirassol"
+			  },
+			  {
+				  nome: "Luan", idade: 43, cidade: "Rio de Janeiro"
+			  },
+			  {
+				  nome: "Marta", idade: 56, cidade: "Curitiba"
+			  },
+			  {
+				  nome: "Nair", idade: 13, cidade: "Joinville"
+			  },
+			  {
+				  nome: "Berenice", idade: 26, cidade: "Recife"
+			  },
+			  {
+				  nome: "Carlos", idade: 43, cidade: "João Pessoa"
+			  },
+			  {
+				  nome: "Carlo5", idade: 43, cidade: "João Pessoa"
+			  },
+			  {
+				  nome: "Roberto", idade: 76, cidade: "Anapolis"
+			  },
+			  {
+				  nome: "Salma", idade: 83, cidade: "Bebedouro"
+			  },
+			  {
+				  nome: "Daniel", idade: 22, cidade: "São Sebatião da Grama"
+			  },
+			  {
+				  nome: "Fernanda", idade: 3, cidade: "Guarulhos"
+			  },
+			  {
+				  nome: "Gabriela", idade: 55, cidade: "Holambra"
+			  },
+			  {
+				  nome: "Heitor", idade: 18, cidade: "Florianópolis"
+			  },
+			  {
+				  nome: "Jaqueline", idade: 27, cidade: "Porto Alegre"
+			  },
+			  {
+				  nome: "Katia", idade: 46, cidade: "Diadema"
+			  },
+			  {
+				  nome: "Patrícia", idade: 52, cidade: "Esmeralda"
+			  },
+			  {
+				  nome: "Oneide", idade: 95, cidade: "Limeira"
+			  }
+			];
+			let pessoas1 = pessoas
+			
+			document.write("Objeto sem ordem: " + JSON.stringify(pessoas) + "<br>");
+			document.write("Tamanho Objeto: " + pessoas.length + "<br><br>");
+			document.write("<span style='font-weight:bold'><br>INFORMAÇÕES OBJETO - LÓGICA 1 - ORDEM CRESCENTE<br><br></span>");
+			
+			
+			pessoas.sort(function(a, b) {
+			  if(a.nome < b.nome) {
+				return -1;
+			  } else {
+				return true;
+			  }
+			});
+			
+//			console.log(pessoas);
+			document.write("OBJETO 1 ordenado crescente: " + JSON.stringify(pessoas) + "<br><br>");
+
+			document.write("<span style='font-weight:bold'><br>INFORMAÇÕES OBJETO - LÓGICA 1 - ORDEM DECRESCENTE<br><br></span>");
+			
+			
+			pessoas.sort(function(a, b) {
+			  if(a.nome > b.nome) {
+				return -1;
+			  } else {
+				return true;
+			  }
+			});
+			
+//			console.log(pessoas);
+			document.write("OBJETO 1 ordenado decrescente: " + JSON.stringify(pessoas) + "<br><br>");
+
+			document.write("<span style='font-weight:bold'><br>INFORMAÇÕES OBJETO - LÓGICA 2 - ORDEM CRESCENTE<br><br></span>");
+			
+
+			pessoas1.sort(function (a, b) {
+			  return a.nome > b.nome ? 1 : b.nome > a.nome ? -1 : 0;
+			});
+
+			document.write("OBJETO 2 ordenado crescente: " + JSON.stringify(pessoas1) + "<br><br>");
+
+			document.write("<span style='font-weight:bold'><br>INFORMAÇÕES OBJETO - LÓGICA 2 - ORDEM DECRESCENTE<br><br></span>");
+			
+
+			pessoas1.sort(function (a, b) {
+			  return a.nome > b.nome ? 1 : b.nome > a.nome ? -1 : 0;
+			});
+
+			document.write("OBJETO 2 ordenado decrescente: " + JSON.stringify(pessoas1) + "<br><br>");
+
+		</script>
+	</head>
+	<body>
+
+		
+	</body>
+	<footer>
+
+
+	</footer>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="XXX"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-01 12:41:57 "/>
+        <attribute name="created" value="WFhYO0RFU0tUT1AtMVFLQkVVVDsyMDIyLTA1LTAxOyIxMjoyMToyNiAiOzI1Mzc="/>
+        <attribute name="edited" value="WFhYO0RFU0tUT1AtMVFLQkVVVDsyMDIyLTA1LTAxOyIxMjo0MTo1NyAiOzE7MjY1MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="T, pa, pa1, pa2, i" type="Integer" array="False" size=""/>
+            <assign variable="T" expression="0"/>
+            <assign variable="pa" expression="9"/>
+            <assign variable="pa1" expression="1"/>
+            <assign variable="pa2" expression="2"/>
+            <assign variable="i" expression="1"/>
+            <output expression="ToInteger(ToString(pa)&amp;ToString(i))" newline="True"/>
+            <assign variable="T" expression="ToInteger(pa&amp;ToString(i))"/>
+            <output expression="&quot;T &quot;&amp; T" newline="True"/>
+            <assign variable="T" expression="T + 1"/>
+            <output expression="&quot;T &quot;&amp; T" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

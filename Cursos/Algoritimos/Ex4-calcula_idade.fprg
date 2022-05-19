@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="XXX"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-01 02:07:23 "/>
+        <attribute name="created" value="WFhYO0RFU0tUT1AtMVFLQkVVVDsyMDIyLTA0LTMwOyIxMTo0ODozNiAiOzI1NDc="/>
+        <attribute name="edited" value="WFhYO0RFU0tUT1AtMVFLQkVVVDsyMDIyLTA1LTAxOyIwMjowNzoyMyAiOzY7MjY1MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="diaNasc, mesNasc, anoNasc, diaAtual, mesAtual, anoAtual, bisexto, valida, qtdDia, qtdMes, qtdAno" type="Integer" array="False" size=""/>
+            <declare name="msg" type="String" array="False" size=""/>
+            <declare name="idade" type="Integer" array="True" size="3"/>
+            <assign variable="msg" expression="&quot;&quot;"/>
+            <assign variable="valida" expression="0"/>
+            <assign variable="qtdDia" expression="0"/>
+            <assign variable="qtdMes" expression="0"/>
+            <assign variable="qtdAno" expression="0"/>
+            <assign variable="bisexto" expression="0"/>
+            <while expression="valida==0">
+                <if expression="msg != &quot;&quot;">
+                    <then>
+                        <output expression="msg" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;Informe sua data de nascimento no formato DD MM AAAA :&quot;" newline="True"/>
+                <input variable="diaNasc"/>
+                <input variable="mesNasc"/>
+                <input variable="anoNasc"/>
+                <output expression="&quot;Informe a data atual no formato DD MM AAAA :&quot;" newline="True"/>
+                <input variable="diaAtual"/>
+                <input variable="mesAtual"/>
+                <input variable="anoAtual"/>
+                <if expression="anoAtual % 4 == 0 &amp;&amp; anoAtual % 100 != 0 || anoAtual % 400 == 0">
+                    <then>
+                        <assign variable="bisexto" expression="1"/>
+                    </then>
+                    <else>
+                        <assign variable="bisexto" expression="0"/>
+                    </else>
+                </if>
+                <output expression="&quot;Valor Bisexto = &quot; &amp; bisexto &amp; &quot;  &quot; &amp;&#13;&#10;&quot;Nasc &quot; &amp; diaNasc &amp; &quot;/&quot; &amp; mesNasc &amp; &quot;/&quot; &amp; anoNasc &amp; &quot;  &quot; &amp;&#13;&#10;&quot;Atual &quot; &amp; diaAtual &amp; &quot;/&quot; &amp; mesAtual &amp; &quot;/&quot; &amp; anoAtual &amp; &quot;  &quot;" newline="True"/>
+                <if expression="diaNasc == diaAtual &amp;&amp; mesNasc == mesAtual &amp;&amp; anoNasc == anoAtual || 150 &lt; (anoAtual - anoNasc)">
+                    <then>
+                        <assign variable="valida" expression="0"/>
+                        <output expression="&quot;validaData IF DATA IGUAL&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="anoAtual &lt; anoNasc || anoAtual == anoNasc &amp;&amp; mesAtual &lt; mesNasc || anoAtual == anoNasc &amp;&amp; mesAtual == mesNasc &amp;&amp; diaAtual &lt;= diaNasc">
+                            <then>
+                                <assign variable="valida" expression="0"/>
+                                <output expression="&quot;validaData IF ANO&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="diaNasc &lt; 1 || diaNasc &gt; 31 || diaAtual &lt; 1 || diaAtual &gt; 31 || mesNasc &lt; 1 || mesNasc &gt; 12 || mesAtual &lt; 1 || mesAtual &gt; 12">
+                                    <then>
+                                        <assign variable="valida" expression="0"/>
+                                        <output expression="&quot;validaData IF 1&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="diaNasc ==31 &amp;&amp; mesNasc == 4 || mesNasc ==6 || mesNasc == 9 || mesNasc ==11">
+                                            <then>
+                                                <assign variable="valida" expression="0"/>
+                                                <output expression="&quot;validaData IF 2&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="diaAtual ==31 &amp;&amp; mesAtual == 4 || mesAtual ==6 || mesAtual == 9 || mesAtual ==11">
+                                                    <then>
+                                                        <assign variable="valida" expression="0"/>
+                                                        <output expression="&quot;validaData IF 3&quot;" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="mesNasc == 2 &amp;&amp; diaNasc &gt; 28">
+                                                            <then>
+                                                                <assign variable="valida" expression="0"/>
+                                                                <output expression="&quot;validaData IF 4&quot;" newline="True"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="mesAtual == 2 &amp;&amp; diaAtual &gt; 29">
+                                                                    <then>
+                                                                        <assign variable="valida" expression="0"/>
+                                                                        <output expression="&quot;validaData IF 5&quot;" newline="True"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <if expression="mesAtual == 2 &amp;&amp; diaAtual == 29 &amp;&amp; bisexto == 0">
+                                                                            <then>
+                                                                                <assign variable="valida" expression="0"/>
+                                                                                <output expression="&quot;validaData IF 6&quot;" newline="True"/>
+                                                                            </then>
+                                                                            <else>
+                                                                                <assign variable="valida" expression="1"/>
+                                                                            </else>
+                                                                        </if>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Valida = &quot; &amp; valida" newline="True"/>
+                <if expression="valida==0">
+                    <then>
+                        <assign variable="msg" expression="&quot;Data Inv&#225;lida!!! informe a data correta&quot;"/>
+                    </then>
+                    <else>
+                        <assign variable="msg" expression="&quot;&quot;"/>
+                    </else>
+                </if>
+            </while>
+            <while expression="mesNasc &lt; mesAtual -1 || anoNasc &lt; anoAtual">
+                <assign variable="mesNasc" expression="mesNasc+1"/>
+                <assign variable="qtdMes" expression="qtdMes+1"/>
+                <if expression="qtdMes == 12">
+                    <then>
+                        <assign variable="qtdMes" expression="0"/>
+                        <assign variable="qtdAno" expression="qtdAno+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="mesNasc == 12">
+                    <then>
+                        <assign variable="anoNasc" expression="anoNasc+1"/>
+                        <assign variable="mesNasc" expression="0"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <if expression="diaNasc == diaAtual">
+                <then>
+                    <assign variable="qtdMes" expression="qtdMes+1"/>
+                    <assign variable="qtdDia" expression="0"/>
+                </then>
+                <else>
+                    <if expression="diaNasc &lt; diaAtual">
+                        <then>
+                            <assign variable="qtdMes" expression="qtdMes+1"/>
+                            <assign variable="qtdDia" expression="diaAtual - diaNasc"/>
+                        </then>
+                        <else>
+                            <assign variable="qtdDia" expression="diasNoMes(mesAtual-1, bisexto) + diaAtual - diaNasc"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="qtdMes == 12">
+                <then>
+                    <assign variable="qtdMes" expression="0"/>
+                    <assign variable="qtdAno" expression="qtdAno+1"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Sua idade &#233;: &quot; &amp; qtdAno &amp; &quot; anos, &quot; &amp; qtdMes &amp; &quot; meses e &quot; &amp; QtdDia &amp; &quot; dias.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="anoBisexto" type="Integer" variable="bisexto">
+        <parameters>
+            <parameter name="anoAtual" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="bisexto" type="Integer" array="False" size=""/>
+        </body>
+    </function>
+    <function name="calculaIdade" type="Integer" variable="idade">
+        <parameters>
+            <parameter name="diaNasc" type="Integer" array="False"/>
+            <parameter name="mesNasc" type="Integer" array="False"/>
+            <parameter name="anoNasc" type="Integer" array="False"/>
+            <parameter name="diaAtual" type="Integer" array="False"/>
+            <parameter name="mesAtual" type="Integer" array="False"/>
+            <parameter name="anoAtual" type="Integer" array="False"/>
+            <parameter name="bisexto" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="idade" type="Integer" array="True" size="3"/>
+            <declare name="qtdDia, qtdMes, qtdAno" type="Integer" array="False" size=""/>
+            <assign variable="idade[0]" expression="qtdAno"/>
+            <assign variable="idade[1]" expression="qtdMes"/>
+            <assign variable="idade[2]" expression="qtdDia"/>
+        </body>
+    </function>
+    <function name="diasNoMes" type="Integer" variable="dias">
+        <parameters>
+            <parameter name="mes" type="Integer" array="False"/>
+            <parameter name="bisexto" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="dias" type="Integer" array="False" size=""/>
+            <if expression="mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes==10 || mes==12">
+                <then>
+                    <assign variable="dias" expression="31"/>
+                </then>
+                <else>
+                    <if expression="mes==4 || mes==6 || mes==9 || mes==11">
+                        <then>
+                            <assign variable="dias" expression="30"/>
+                        </then>
+                        <else>
+                            <if expression="bisexto==1">
+                                <then>
+                                    <assign variable="dias" expression="29"/>
+                                </then>
+                                <else>
+                                    <assign variable="dias" expression="28"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="validaData" type="Integer" variable="vvalida">
+        <parameters>
+            <parameter name="diaNasc" type="Integer" array="False"/>
+            <parameter name="mesNasc" type="Integer" array="False"/>
+            <parameter name="anoNasc" type="Integer" array="False"/>
+            <parameter name="diaAtual" type="Integer" array="False"/>
+            <parameter name="mesAtual" type="Integer" array="False"/>
+            <parameter name="anoAtual" type="Integer" array="False"/>
+            <parameter name="bisexto" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="valida" type="Integer" array="False" size=""/>
+            <declare name="vvalida" type="Integer" array="False" size=""/>
+            <output expression="&quot;entrou validaData&quot;" newline="True"/>
+            <output expression="&quot;ValidaData valida = &quot; &amp; vvalida" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

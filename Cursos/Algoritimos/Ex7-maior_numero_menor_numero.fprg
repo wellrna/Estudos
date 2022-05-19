@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="XXX"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-01 09:55:11 "/>
+        <attribute name="created" value="WFhYO0RFU0tUT1AtMVFLQkVVVDsyMDIyLTA1LTAxOyIwODo1Njo1OCAiOzI1NTU="/>
+        <attribute name="edited" value="WFhYO0RFU0tUT1AtMVFLQkVVVDsyMDIyLTA1LTAxOyIwOTo1NToxMSAiOzI7MjY1Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="maN, meN, i" type="Integer" array="False" size=""/>
+            <declare name="n" type="Integer" array="True" size="10"/>
+            <assign variable="maN" expression="0"/>
+            <output expression="&quot;Informe o n&#250;mero 1:&quot;" newline="True"/>
+            <input variable="n[0]"/>
+            <output expression="&quot;Informe o n&#250;mero 2:&quot;" newline="True"/>
+            <input variable="n[1]"/>
+            <output expression="&quot;Informe o n&#250;mero 3:&quot;" newline="True"/>
+            <input variable="n[2]"/>
+            <output expression="&quot;Informe o n&#250;mero 4:&quot;" newline="True"/>
+            <input variable="n[3]"/>
+            <output expression="&quot;Informe o n&#250;mero 5:&quot;" newline="True"/>
+            <input variable="n[4]"/>
+            <output expression="&quot;Informe o n&#250;mero 6:&quot;" newline="True"/>
+            <input variable="n[5]"/>
+            <output expression="&quot;Informe o n&#250;mero 7:&quot;" newline="True"/>
+            <input variable="n[6]"/>
+            <output expression="&quot;Informe o n&#250;mero 8:&quot;" newline="True"/>
+            <input variable="n[7]"/>
+            <output expression="&quot;Informe o n&#250;mero 9:&quot;" newline="True"/>
+            <input variable="n[8]"/>
+            <output expression="&quot;Informe o n&#250;mero 10:&quot;" newline="True"/>
+            <input variable="n[9]"/>
+            <assign variable="meN" expression="n[0]"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <if expression="maN &lt; (n[i])">
+                    <then>
+                        <assign variable="maN" expression="n[i]"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="meN &gt; (n[i])">
+                    <then>
+                        <assign variable="meN" expression="n[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;O maior n&#250;mero &#233; &quot; &amp; maN &amp; &quot; e o menor numero &#233; &quot; &amp; meN" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

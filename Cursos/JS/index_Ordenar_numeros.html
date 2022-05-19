@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang=“pt-br”>
+	<head>
+		<title>Curso de Javascript</title>
+		<meta charset=“UTF-8”>
+
+<!--
+		<style>
+
+		</style>
+-->
+
+		<script>
+
+			document.write("<span style='font-size:20px'><span style='font-family: verdana, arial'>");
+			document.write("<span style='font-weight:bold'><br>ORDENAR NÚMEROS<br><br></span>");
+
+			let array = [
+			  55,
+			  99,
+			  77,
+			  92,
+			  32,
+			  35,
+			  65,
+			  96,
+			  75,
+			  89,
+			  12,
+			  84,
+			  15,
+			  24,
+			  28,
+			  43,
+			  46,
+			  20,
+			  30,
+			  36,
+			  38,
+			  47,
+			  53,
+			  8,
+			  13,
+			  19,
+			  22,
+			  27,
+			  52,
+			  72,
+			  66,
+			  81,
+			  0,
+			  69,
+			  1
+			];
+
+			let array1 = array;
+			let array2 = array;
+			let array3 = array;
+			let arr = array;
+			
+			document.write("<span style='font-weight:bold'><br>INFORMAÇÕES ARRAY<br><br></span>");
+			document.write("Array sem ordem: " + array+"<br>");
+			document.write("Tamanho array: " + array.length+"<br><br>");
+
+//			METODO .SORT()
+
+			document.write("<span style='font-weight:bold'><br>METODO .SORT() <br><br></span>");
+
+			array3.sort();
+			document.write("Array ordenado: " + array3 + "<br><br>");
+
+//			BUBBLE SORT 1
+
+			document.write("<span style='font-weight:bold'><br>BUBBLE SORT 1<br><br></span>");
+
+			function sortItems(array) {
+			  console.log("começou ordenar");
+			  for (let i = 0; i < array.length; i++) {
+				console.log("ordenando " + i + " - " + array.length);
+				for (let j = 0; j < array.length; j++) {
+				  if (array[j] > array[j + 1]) {
+					let temp = array[j];
+					array[j] = array[j + 1];
+					array[j + 1] = temp;
+				  }
+				}
+			  }
+
+			  return array;
+			}
+			
+			document.write("Bubble Sort 1 - array ordenado: " + sortItems(array)+"<br><br>");
+
+//			BUBBLE SORT 2
+
+			document.write("<span style='font-weight:bold'><br>BUBBLE SORT 2<br><br></span>");
+
+			function sortItems1(array1) {
+			  let troca = true;
+			  do {
+				troca = false;
+				for (let j = 0; j < array1.length; j++) {
+				  console.log("ordenando " + j + " - " + array2.length);
+
+				  if (array1[j] > array1[j + 1]) {
+					let temp = array1[j];
+					array1[j] = array1[j + 1];
+					array1[j + 1] = temp;
+					troca = true;
+				  }
+				}
+			  } while (troca);
+
+			  return array1;
+			}
+
+			document.write("Bubble Sort 2 - array1 ordenado: " + sortItems1(array1)+"<br><br>");
+
+//			MERGE SORT RECURSIVO
+
+			document.write("<span style='font-weight:bold'><br>MERGE SORT - FUNÇÃO RECURSIVA<br><br></span>");
+
+//			const arr = [23, 4, 67, 32, 1, 7, 56, 5, 89];
+			const mergeSort = (arr) => {
+			  if (arr.length < 2) {
+				return arr;
+			  }
+			  const middle = Math.floor(arr.length / 2);
+			  const left = arr.slice(0, middle),
+				right = arr.slice(middle, arr.length);
+			  return merge(mergeSort(left), mergeSort(right));
+			};
+			const merge = (left, right) => {
+			  const res = [];
+			  while (left.length && right.length) {
+				if (left[0] <= right[0]) {
+				  res.push(left.shift());
+				} else {
+				  res.push(right.shift());
+				}
+			  }
+			  while (left.length) {
+				res.push(left.shift());
+			  }
+			  while (right.length) {
+				res.push(right.shift());
+			  }
+			  return res;
+			};
+
+		document.write("Merge Sort - arr ordenado: " + mergeSort(arr)+"<br><br>");
+
+		</script>
+	</head>
+	<body>
+
+		
+	</body>
+	<footer>
+
+
+	</footer>
+</html>
