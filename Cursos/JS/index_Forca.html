@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang=“pt-br”>
+	<head>
+		<meta charset=“UTF-8”>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Curso de Javascript</title>
+		<style type="text/css">
+
+			body{
+				font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			}
+
+			.letra{
+				width: 30px;
+				font-size: 30px;
+				text-transform: uppercase;
+				text-align: center;
+				margin: 5px;
+				display: none;
+			}
+
+			.letraJ{
+				width: 30px;
+				font-size: 30px;
+				text-transform: uppercase;
+				text-align: center;
+				margin: 5px;
+			}
+
+			.dvdisplay{
+				display: block;			
+			}
+
+			#dvForca{
+				position:absolute;
+				left:150px;
+			}
+
+			.cabeca{
+				position:absolute;
+				top:0px;
+				left:0px;
+			}
+			#perdeu{
+				position:absolute;
+				top:0px;
+				left:175px;
+			}
+			#perdeu2{
+				position:absolute;
+				top:100px;
+				left:0px;
+			}
+
+/*
+			#corpo{
+				position:absolute;
+				top:200px;
+				left:105px;
+			}
+
+			#bracoE{
+				position:absolute;
+				top:220px;
+				left:-17px;
+			}
+
+			#bracoD{
+				position:absolute;
+				top:220px;
+				left:105px;
+			}
+
+			#pernaE{
+				position:absolute;
+				top:450px;
+				left:-66px;
+			}
+
+			#pernaD{
+				position:absolute;
+				top:450px;
+				left:105px;
+			}
+*/
+		</style>
+		<script>
+
+			let biblioteca=["javascript","teste","bacana","banana"];
+			let qtde=biblioteca.length-1;
+			let pos=Math.round(Math.random()*qtde);
+			let palavra=biblioteca[pos];
+			let tam=palavra.length;
+			let cxLetras=[];
+			let acertos;
+			let errosMax=7;
+			let erros=0;
+			let desenhos=[];
+//			let desenhos=["","","","","","","","","",""];
+			let acertou=false;
+			let jogando=false;
+			let jog;
+			let teste;
+
+			function defineLetras(l){
+				let obj;
+				for(let i=0;i<20;i++){
+					obj=document.getElementById("letra"+i).value="";
+					obj=document.getElementById("letra"+i).style.display="none";
+				}
+				for(let i=0;i<l;i++){
+					obj=document.getElementById("letra"+i).style.display="inline-block";
+				}
+			}
+
+			function jogar(){
+//				jog=document.getElementById("letraJ");
+				if(jogando){
+					jog.focus();
+					if(jog.value==""){
+						alert("Digite uma letra");
+					}else{
+						let obj;
+						let letraTmp;
+						let letra;
+						let pesq;
+						letra=jog.value;
+						jog.value="";
+						acertou=false;
+						pesq=palavra.match(letra);
+						while(pesq!=null){
+							letraTmp=palavra.search(letra);
+							obj=document.getElementById("letra"+letraTmp).value=letra;
+							palavra=palavra.replace(letra,'0');
+							acertos++;
+							pesq=palavra.match(letra);
+							acertou=true;
+						}
+						if(!acertou){
+							document.getElementById("dvletrasdigitadas").innerHTML+=letra.toUpperCase() + " ";
+							erros++;
+							if(erros<7){
+								desenhos[erros].style.display="block";
+								document.getElementById("dvmsg").innerHTML="ERROU";
+								document.getElementById("dverros").innerHTML="Erros: "+erros;
+							}else{
+								for(let i=0;i<7;i++){
+									desenhos[i].style.display="none";
+								}
+								document.getElementById("dvmsg").innerHTML="ERROU";
+								document.getElementById("dverros").innerHTML="Erros: "+erros;
+								desenhos[erros].style.display="block";
+								desenhos[erros+1].style.display="block";
+//								document.getElementById("cabeca").src="../../../AulasR/Imagens/Forca/forca.jpg";
+//								document.getElementById("dvmsg").innerHTML="PERDEU";
+								jogando=false;
+							}
+						}else{
+							document.getElementById("dvmsg").innerHTML="ACERTOU";
+						}
+						if(acertos==tam){
+							for(let i=0;i<9;i++){
+									desenhos[i].style.display="none";
+								}
+							desenhos[9].style.display="block";
+							document.getElementById("dvmsg").innerHTML="";
+//							document.getElementById("dvmsg").innerHTML="GANHOU";
+							jogando=false;
+						}
+					}
+				}
+			}
+
+			function inicia(){
+				jogando=true;
+				jog=document.getElementById("letraJ");
+				jog.value="";
+				jog.focus();
+				acertos=0;
+				erros=0;
+				acertou=false;
+				document.getElementById("dvletrasdigitadas").innerHTML="Letras Erradas:";
+				document.getElementById("dverros").innerHTML="Erros: "+erros;
+				pos=Math.round(Math.random()*qtde);
+				palavra=biblioteca[pos];
+				tam=palavra.length;
+				defineLetras(tam);
+				document.getElementById("dvmsg").innerHTML="";
+//				for(let i=1;i<10;i++){
+//					desenhos[i].style.display="none";
+//				}
+				desenhos[0]=document.getElementById("haste");
+				desenhos[1]=document.getElementById("cabeca");
+				desenhos[2]=document.getElementById("corpo");
+				desenhos[3]=document.getElementById("bracoE");
+				desenhos[4]=document.getElementById("bracoD");
+				desenhos[5]=document.getElementById("pernaE");
+				desenhos[6]=document.getElementById("pernaD");
+				desenhos[7]=document.getElementById("perdeu");
+				desenhos[8]=document.getElementById("perdeu2");
+				desenhos[9]=document.getElementById("ganhou");
+				document.getElementById("haste").src="c:/AulasR/Imagens/Forca/1.gif";
+				desenhos[0].style.display="block";
+				for(let i=1;i<10;i++){
+					desenhos[i].style.display="none";
+				}
+				console.log(desenhos[0]);
+				console.log(desenhos[1]);
+				console.log(desenhos[2]);
+				console.log(desenhos[3]);
+				console.log(desenhos[4]);
+				console.log(desenhos[5]);
+				console.log(desenhos[6]);
+				console.log(desenhos[7]);
+				console.log(desenhos[8]);
+				console.log(desenhos[9]);
+				console.log(desenhos);
+			}
+
+			function dica(){
+				alert(palavra);
+				jog.focus();
+			}
+
+			window.addEventListener("load",inicia);
+
+		</script>
+	</head>
+	<body>
+	
+		<div id="dvmenu" class="dvdisplay">
+			<button onclick="inicia()">Nova Palavra</button>
+		</div>
+		<div id="dvpalavra" class="dvdisplay">
+			<input type="text" id="letra0" class="letra" maxlength="1">
+			<input type="text" id="letra1" class="letra" maxlength="1">
+			<input type="text" id="letra2" class="letra" maxlength="1">
+			<input type="text" id="letra3" class="letra" maxlength="1">
+			<input type="text" id="letra4" class="letra" maxlength="1">
+			<input type="text" id="letra5" class="letra" maxlength="1">
+			<input type="text" id="letra6" class="letra" maxlength="1">
+			<input type="text" id="letra7" class="letra" maxlength="1">
+			<input type="text" id="letra8" class="letra" maxlength="1">
+			<input type="text" id="letra9" class="letra" maxlength="1">
+			<input type="text" id="letra10" class="letra" maxlength="1">
+			<input type="text" id="letra11" class="letra" maxlength="1">
+			<input type="text" id="letra12" class="letra" maxlength="1">
+			<input type="text" id="letra13" class="letra" maxlength="1">
+			<input type="text" id="letra14" class="letra" maxlength="1">
+			<input type="text" id="letra15" class="letra" maxlength="1">
+			<input type="text" id="letra16" class="letra" maxlength="1">
+			<input type="text" id="letra17" class="letra" maxlength="1">
+			<input type="text" id="letra18" class="letra" maxlength="1">
+			<input type="text" id="letra19" class="letra" maxlength="1">
+		</div>
+		<div id="dvjogador" class="dvdisplay">
+			<div id="controlesJogador">
+				<input type="text" id="letraJ" class="letraJ" maxlength="1">
+				<button onclick="jogar()">Jogar</button>
+<!--
+				<button onclick="dica()">Dica</button>
+-->
+				<div id="dvmsg"></div><br>
+				<div id="dverros">Erros:</div>
+				<div id="dvletrasdigitadas">Letras Digitadas:</div>
+			</div>
+			<div id="regras">
+				<br><br>
+				<h2>Como Jogar</h2>
+				<p>Para iniciar o jogo clique no botão "Nova Palavra"</p>
+				<p>Será sorteada uma palavra e apresentada a quantidade de letras da palavra</p>
+				<p>Digite uma letra e clique no botão "Jogar"</p>
+				<p>Será informado se acertou ou errou a letra</p>
+				<p>Você pode errar até 7 vezes</p>
+
+			</div>
+			<div id="dvForca">
+				<img id="haste" class="cabeca" src="../../../AulasR/Imagens/Forca/1.gif">
+				<img id="cabeca" class="cabeca" src="../../../AulasR/Imagens/Forca/2.gif">
+				<img id="corpo" class="cabeca" src="../../../AulasR/Imagens/Forca/3.gif">
+				<img id="bracoE" class="cabeca" src="../../../AulasR/Imagens/Forca/4.gif">
+				<img id="bracoD" class="cabeca" src="../../../AulasR/Imagens/Forca/5.gif">
+				<img id="pernaE" class="cabeca" src="../../../AulasR/Imagens/Forca/6.gif">
+				<img id="pernaD" class="cabeca" src="../../../AulasR/Imagens/Forca/7.gif">
+				<img id="perdeu" src="../../../AulasR/Imagens/Forca/forca.jpg">
+				<img id="perdeu2" src="../../../AulasR/Imagens/Forca/perdeu.jpg">
+				<img id="ganhou" class="cabeca" src="../../../AulasR/Imagens/Forca/ganhou.png">
+			</div>
+		</div>
+		
+	</body>
+<!--
+		<footer>
+		</br></br></br></br></br></br></br></br>
+		<p>PARA MOVIMENTAR OU MUDAR A VELOCIDADE DO BLOCO PRETO: CLIQUE COM O MOUSE SOBRE ELE.</p>
+		<p>PARA AUMENTAR A VELOCIDADE DO MOVIMENTO USE AS TECLAS + PARA AUMENTAR OU - PARA DIMINUIR.</p>
+		<p>MOVIMENTE O BLOCO VERMELHO PRESSIONANDO AS SETAS (UP / DOWN / LEFT / RIGHT).</p>
+		<p>PARA FIXA-LO APÓS MOVIMENTAR: TECLE ENTER.</p>
+	</footer>
+-->
+</html>

@@ -1,0 +1,29 @@
+body {
+    background-color: aquamarine;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 150px;
+    background-color:green;
+    color: white;
+}
+
+p {
+    font-size: 35px;
+    background-color: white;
+    color: purple;
+}
+
+h3, ul, a{ 
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+a{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+/* existe outro arquivo com formatações e nele há um seletor a exclusivo, assim ele
+assume a configuração do outro arquivo quando o seletor a for utilizado em conjunto
+com outros como na linha "h3, ul, a", mas se houveu um a exclusivo aqui também ele
+contatena as formatações. */

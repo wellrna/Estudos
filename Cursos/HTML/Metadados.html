@@ -12,9 +12,98 @@
         <meta name="keywords" content="palavras relacionadas a página usadas por motores. Ex. e-commerce, pet-shop, cachorros, gatos, aves, peixes, roedor, réptil, alimentos" />
         <meta name="author" content="John Doe" />
         <meta name="robots" content="orientações aos robôs de busca" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--OBRIGATÓRIO EM TODAS AS PÁGINAS, PARA QUE TENHAM MELHOR VISUALIZAÇÃO INDEPENDENTE DO DISPOSITIVO USADO-->
 
         <base href="https://www.uol.com.br/" />
 
+        <style>
+            #tabela2 {                       /* linha original era table, substitui por id com tabela2 */
+                width: 100%;
+                border-collapse: separate;   /* separate  collapse  */
+                border-spacing: 10px 20px;
+                border: 1px solid blue;
+                empty-cells: hide;           /* este recurso só funciona em conjunto com o border-collapse: separate;*/
+            }
+            #tabela2h{
+                color: red;
+                font-size: 16pt;
+            }
+            #tabela2b{
+                font-weight: bold;
+                text-align: center;
+            }
+            #tabela2f{
+                color: gray;
+            }
+            .tabela2-1{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .tabela2-2{                      /* linha original era tr, td e th, substitui por class com tabela2-2 */
+                border: 1px solid blue;    
+            }
+            caption{
+                caption-side: bottom;
+                color:blueviolet;
+                font-size: 9pt;
+                text-align: left;
+            }
+            #tabela3 {                       /* linha original era table, substitui por id com tabela2 */
+                width: 100%;
+                border-collapse: collapse;   /* separate  collapse  */
+                border: 1px solid gray;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            #tabela3h{
+                font-size: 16pt;
+                background-color: lightgray;
+                text-align: left;
+            }
+            #tabela3b{
+                 font-weight: bold;
+            }
+            #tabela3b tr:nth-child(even){
+                background-color: lightskyblue;
+            }
+            #tabela3b tr:nth-child(odd){
+                background-color: lightcyan;
+            }
+            #tabela3b tr:hover {
+                background-color: yellow;
+            }
+            #tabela3f{
+                background-color: lightgray;
+                font-style: 10pt;
+            }
+            #tabela3c{
+                caption-side: bottom;
+                color:black;
+                font-size: 9pt;
+                text-align: center;
+            }
+            #tabela3endereco{
+                text-align: center;
+            }
+            .tabela3-2{                      /* linha original era tr, td e th, substitui por class com tabela2-2 */
+                border: 1px solid gray;    
+            }
+            /* as linhas individuais tr, td e th abaixo podem ser agrupadas e declaradas como esta primeira abaixo:
+            tr, td, th{
+                border: 5px solid blue;    
+            }
+
+            tr{
+                border: 5px solid blue;    
+            }
+
+            td{
+                border: 5px solid blue;    
+            }
+
+            th{
+                border: 5px solid blue;    
+            }
+*/            
+        </style>
         
     </head>
 
@@ -24,7 +113,7 @@
         <a href="economia/">ir para economia(foi utilizada a tag base para os link's do UOL)</a><br>
         <a href="esportes/">ir para esportes</a><br>
         <a href="https://www.terra.com.br/">ir para o Terra</a><br>
-        <a>mais informações, rever módulo 3 aula 32</a><br>
+        <p>mais informações, rever módulo 3 aula 32</p>
 
         <h2>Orientações aos robôs na tag meta</h2>
         <ul>
@@ -35,26 +124,25 @@
             <li>nosnippet</li>
             <li>noarchive</li>
             <li>noimageindex</li>
-            <li>mais informações, rever módulo 3 aula 33</li>
         </ul>
+        <p>mais informações, rever módulo 3 aula 33</p>
 
         <h2>Como inserir Favico</h2>
         <img src="file://C:/AulasR/Imagens/favicon1/favicon.ico" /><br>
-        <a href="https://www.favicon.io/">Converter imagem para fazer icone - Favico</a><br>
+        <a href="https://www.favicon.io/">Converter imagem para fazer icone - Favico</a>
         <p>mais informações, rever módulo 3 aula 35</p>
 
         <h2>Como inserir Hiperlink</h2>
-        <a href="https://www.uol.com.br/ecoa/amp-stories/como-fazer-monte-horta-caseira-para-colheita-rapida/" target="blank"><br>
+        <a href="https://www.uol.com.br/ecoa/amp-stories/como-fazer-monte-horta-caseira-para-colheita-rapida/" target="blank">
             <img src="https://conteudo.imguol.com.br/c/entretenimento/20/2022/04/11/amp-como-fazer-horta-rapida-001-1649706045930_v2_450x800.png"  width="200px"/><br>
             Saiba como montar uma horta variada e de crescimento rápido
-        </a><br><br>       
+        </a><br>       
 
         <a href="https://www.uol.com.br/ecoa/ultimas-noticias/2022/04/06/como-separar-seu-lixo-em-4-passos-para-o-descarte-correto-de-reciclaveis.htm" target="blank"><br>
             <img src="https://conteudo.imguol.com.br/c/entretenimento/3f/2022/03/29/amp-como-fazer-separar-para-reciclagem-001-1648583463286_v2_450x600.jpg" width="200px"/><br>
             Como separar seu lixo em 4 passos para o descarte correto de recicláveis...
         </a><br>
-
-        <br><p>mais informações, rever módulo 3 aula 36</p><br>
+        <p>mais informações, rever módulo 3 aula 36</p>
 
         <h2>Como inserir Tabela</h2>
         <table border="1">
@@ -130,131 +218,279 @@
                 <td>Santa Ursula</td>
                 <td>19 99999-1010</td>
             </tr>
+            <tr>
+                <td>Wellington</td>
+                <td></td>
+                <td>São Paulo</td>
+                <td>11 99999-1234</td>
+            </tr>
         </table>
         <p>mais informações, rever módulo 3 aulas 41, 42 e 43</p>
 
-        <h2>Como inserir Tabela com linhas e colunas mescladas e elementos para divisão da tabela</h2>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th rowspan="2">Nome</th>
-                    <th colspan="5">Endereço</th>
-                    <th rowspan="2">Telefone</th>
+        <h2>Como inserir Tabela com linhas e colunas mescladas, elementos HTML para divisão da tabela e CSS para estilos, também inseri id e class</h2>
+        <table id="tabela2" border="1">
+            <caption>Tabela 2 - Relação de clientes da XYZ Company</caption>
+            <thead id="tabela2h" class="tabela2-1">
+                <tr class="tabela2-2">
+                    <th class="tabela2-2" rowspan="2">Nome</th>
+                    <th class="tabela2-2" colspan="5">Endereço</th>
+                    <th class="tabela2-2" rowspan="2">Telefone</th>
                 </tr>
-                <tr>
-                    <th>Rua</th>
-                    <th>Número</th>
-                    <th>Cidade</th>
-                    <th>Estado</th>
-                    <th>CEP</th>
+                <tr class="tabela2-2">
+                    <th class="tabela2-2">Rua</th>
+                    <th class="tabela2-2">Número</th>
+                    <th class="tabela2-2">Cidade</th>
+                    <th class="tabela2-2">Estado</th>
+                    <th class="tabela2-2">CEP</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Wilson</td>
-                    <td>Rua J</td>
-                    <td>1</td>
-                    <td>Santa Cruz</td>
-                    <td>SP</td>
-                    <td>19000-111</td>
-                    <td>19 99999-1111</td>
+            <tbody id="tabela2b" class="tabela2-1">
+                <tr class="tabela2-2">
+                    <td class="tabela2-2">Wilson</td>
+                    <td class="tabela2-2">Rua J</td>
+                    <td class="tabela2-2">1</td>
+                    <td class="tabela2-2">Santa Cruz</td>
+                    <td class="tabela2-2">SP</td>
+                    <td class="tabela2-2">19000-111</td>
+                    <td class="tabela2-2">19 99999-1111</td>
                 </tr>
-                <tr>
-                    <td>Welson</td>
-                    <td>Rua K</td>
-                    <td>2</td>
-                    <td>Santo Anjo</td>
-                    <td>SP</td>
-                    <td>19000-222</td>
-                <td>19 99999-2222</td>
+                <tr class="tabela2-2">
+                    <td class="tabela2-2">Welson</td>
+                    <td class="tabela2-2">Rua K</td>
+                    <td class="tabela2-2">2</td>
+                    <td class="tabela2-2">Santo Anjo</td>
+                    <td class="tabela2-2">SP</td>
+                    <td class="tabela2-2">19000-222</td>
+                    <td class="tabela2-2">19 99999-2222</td>
                 </tr>
-                <tr>
-                    <td>Wilton</td>
-                    <td>Rua L</td>
-                    <td>3</td>
-                    <td>Santa Paula</td>
-                    <td>SP</td>
-                    <td>19000-333</td>
-                    <td>19 99999-3333</td>
+                <tr class="tabela2-2">
+                    <td class="tabela2-2">Wilton</td>
+                    <td class="tabela2-2">Rua L</td>
+                    <td class="tabela2-2">3</td>
+                    <td class="tabela2-2">Santa Paula</td>
+                    <td class="tabela2-2">SP</td>
+                    <td class="tabela2-2">19000-333</td>
+                    <td class="tabela2-2">19 99999-3333</td>
                 </tr>
-                <tr>
-                    <td>Welton</td>
-                    <td>Rua M</td>
-                    <td>4</td>
-                    <td>Santo Antonio</td>
-                    <td>SP</td>
-                    <td>19000-444</td>
-                <td>19 99999-4444</td>
+                <tr class="tabela2-2">
+                    <td class="tabela2-2">Welton</td>
+                    <td class="tabela2-2">Rua M</td>
+                    <td class="tabela2-2">4</td>
+                    <td class="tabela2-2">Santo Antonio</td>
+                    <td class="tabela2-2">SP</td>
+                    <td class="tabela2-2">19000-444</td>
+                    <td class="tabela2-2">19 99999-4444</td>
                 </tr>
-                <tr>
-                    <td>Wilberson</td>
-                    <td>Rua N</td>
-                    <td>5</td>
-                    <td>Santa Maria</td>
-                    <td>SP</td>
-                    <td>19000-555</td>
-                    <td>19 99999-5555</td>
+                <tr class="tabela2-2">
+                    <td class="tabela2-2">Wilberson</td>
+                    <td class="tabela2-2">Rua N</td>
+                    <td class="tabela2-2">5</td>
+                    <td class="tabela2-2">Santa Maria</td>
+                    <td class="tabela2-2">SP</td>
+                    <td class="tabela2-2">19000-555</td>
+                    <td class="tabela2-2">19 99999-5555</td>
                 </tr>
-                <tr>
-                    <td>Welison</td>
-                    <td>Rua O</td>
-                    <td>6</td>
-                    <td>Santo André</td>
-                    <td>SP</td>
-                    <td>19000-666</td>
-                    <td>19 99999-6666</td>
+                <tr class="tabela2-2">
+                    <td class="tabela2-2">Welison</td>
+                    <td class="tabela2-2">Rua O</td>
+                    <td class="tabela2-2">6</td>
+                    <td class="tabela2-2">Santo André</td>
+                    <td class="tabela2-2">SP</td>
+                    <td class="tabela2-2">19000-666</td>
+                    <td class="tabela2-2">19 99999-6666</td>
                 </tr>
-                <tr>
-                    <td>Wilinson</td>
-                    <td>Rua P</td>
-                    <td>7</td>
-                    <td>Santa Cecília</td>
-                    <td>SP</td>
-                    <td>19000-777</td>
-                <td>19 99999-7777</td>
+                <tr class="tabela2-2">
+                    <td class="tabela2-2">Wilinson</td>
+                    <td class="tabela2-2">Rua P</td>
+                    <td class="tabela2-2">7</td>
+                    <td class="tabela2-2">Santa Cecília</td>
+                    <td class="tabela2-2">SP</td>
+                    <td class="tabela2-2">19000-777</td>
+                    <td class="tabela2-2">19 99999-7777</td>
                 </tr>
-                <tr>
-                    <td>Welerson</td>
-                    <td>Rua Q</td>
-                    <td>8</td>
-                    <td>Santo Andor</td>
-                    <td>SP</td>
-                    <td>19000-888</td>
-                    <td>19 99999-8888</td>
+                <tr class="tabela2-2">
+                    <td class="tabela2-2">Welerson</td>
+                    <td class="tabela2-2">Rua Q</td>
+                    <td class="tabela2-2">8</td>
+                    <td class="tabela2-2">Santo Andor</td>
+                    <td class="tabela2-2">SP</td>
+                    <td class="tabela2-2">19000-888</td>
+                    <td class="tabela2-2">19 99999-8888</td>
                 </tr>
-                <tr>
-                    <td>Wilistone</td>
-                    <td>Rua R</td>
-                    <td>9</td>
-                    <td>Santa Mercília</td>
-                    <td>SP</td>
-                    <td>19000-999</td>
-                <td>19 99999-9999</td>
+                <tr class="tabela2-2">
+                    <td class="tabela2-2">Wilistone</td>
+                    <td class="tabela2-2">Rua R</td>
+                    <td class="tabela2-2">9</td>
+                    <td class="tabela2-2">Santa Mercília</td>
+                    <td class="tabela2-2">SP</td>
+                    <td class="tabela2-2">19000-999</td>
+                    <td class="tabela2-2">19 99999-9999</td>
                 </tr>
-                <tr>
-                    <td>Weliston</td>
-                    <td>Rua S</td>
-                    <td>10</td>
-                    <td>Santo Cantão</td>
-                    <td>SP</td>
-                    <td>19000-000</td>
-                <td>19 99999-0000</td>
+                <tr class="tabela2-2">
+                    <td class="tabela2-2">Weliston</td>
+                    <td class="tabela2-2">Rua S</td>
+                    <td class="tabela2-2">10</td>
+                    <td class="tabela2-2">Santo Cantão</td>
+                    <td class="tabela2-2">SP</td>
+                    <td class="tabela2-2">19000-000</td>
+                    <td class="tabela2-2">19 99999-0000</td>
                 </tr>
-                <tr>
-                    <td>Wilersyon</td>
-                    <td>Rua T</td>
-                    <td>11</td>
-                    <td>Santa Ursula</td>
-                    <td>SP</td>
-                    <td>19000-101</td>
-                <td>19 99999-1010</td>
+                <tr class="tabela2-2">
+                    <td class="tabela2-2">Wilersyon</td>
+                    <td class="tabela2-2">Rua T</td>
+                    <td class="tabela2-2">11</td>
+                    <td class="tabela2-2">Santa Ursula</td>
+                    <td class="tabela2-2">SP</td>
+                    <td class="tabela2-2">19000-101</td>
+                    <td class="tabela2-2">19 99999-1010</td>
                 </tr>
-            </tbody>
-            <tfooter>
-                <td colspan="7">Para maiores informações contatar Beltrano no ramal 6789</td>
-            </tfooter>
+                <tr class="tabela2-2">
+                    <td class="tabela2-2">Wellington</td>
+                    <td class="tabela2-2"></td>
+                    <td class="tabela2-2"></td>
+                    <td class="tabela2-2">São Paulo</td>
+                    <td class="tabela2-2">SP</td>
+                    <td class="tabela2-2"></td>
+                    <td class="tabela2-2">11 99999-1234</td>
+                </tr>
+               </tbody>
+            <tfoot id="tabela2f" class="tabela2-1">
+                <td class="tabela2-2" colspan="7">Para maiores informações contatar Beltrano no ramal 6789</td>
+            </tfoot>
         </table>
-        <p>mais informações, rever módulo 3 aulas 44 e 45</p>
+        <p>mais informações, rever módulo 3 aulas 44 a 49</p>           
+        <h2>Boas práticas na apresentação de tabelas</h2>
+        <table id="tabela3" border="1">
+            <caption id="tabela3c">Tabela 3 - Relação de clientes da XYZ Company</caption>
+            <thead id="tabela3h" class="tabela3-1">
+                <tr class="tabela3-2">
+                    <th class="tabela3-2" rowspan="2">Nome</th>
+                    <th id="tabela3endereco" class="tabela3-2" colspan="5">Endereço</th>
+                    <th class="tabela3-2" rowspan="2">Telefone</th>
+                </tr>
+                <tr class="tabela3-2">
+                    <th class="tabela3-2">Rua</th>
+                    <th class="tabela3-2">Número</th>
+                    <th class="tabela3-2">Cidade</th>
+                    <th class="tabela3-2">Estado</th>
+                    <th class="tabela3-2">CEP</th>
+                </tr>
+            </thead>
+            <tbody id="tabela3b" class="tabela3-1">
+                <tr class="tabela3-2">
+                    <td class="tabela3-2">Wilson</td>
+                    <td class="tabela3-2">Rua J</td>
+                    <td class="tabela3-2">1</td>
+                    <td class="tabela3-2">Santa Cruz</td>
+                    <td class="tabela3-2">SP</td>
+                    <td class="tabela3-2">19000-111</td>
+                    <td class="tabela3-2">19 99999-1111</td>
+                </tr>
+                <tr class="tabela3-2">
+                    <td class="tabela3-2">Welson</td>
+                    <td class="tabela3-2">Rua K</td>
+                    <td class="tabela3-2">2</td>
+                    <td class="tabela3-2">Santo Anjo</td>
+                    <td class="tabela3-2">SP</td>
+                    <td class="tabela3-2">19000-222</td>
+                    <td class="tabela3-2">19 99999-2222</td>
+                </tr>
+                <tr class="tabela3-2">
+                    <td class="tabela3-2">Wilton</td>
+                    <td class="tabela3-2">Rua L</td>
+                    <td class="tabela3-2">3</td>
+                    <td class="tabela3-2">Santa Paula</td>
+                    <td class="tabela3-2">SP</td>
+                    <td class="tabela3-2">19000-333</td>
+                    <td class="tabela3-2">19 99999-3333</td>
+                </tr>
+                <tr class="tabela3-2">
+                    <td class="tabela3-2">Welton</td>
+                    <td class="tabela3-2">Rua M</td>
+                    <td class="tabela3-2">4</td>
+                    <td class="tabela3-2">Santo Antonio</td>
+                    <td class="tabela3-2">SP</td>
+                    <td class="tabela3-2">19000-444</td>
+                    <td class="tabela3-2">19 99999-4444</td>
+                </tr>
+                <tr class="tabela3-2">
+                    <td class="tabela3-2">Wilberson</td>
+                    <td class="tabela3-2">Rua N</td>
+                    <td class="tabela3-2">5</td>
+                    <td class="tabela3-2">Santa Maria</td>
+                    <td class="tabela3-2">SP</td>
+                    <td class="tabela3-2">19000-555</td>
+                    <td class="tabela3-2">19 99999-5555</td>
+                </tr>
+                <tr class="tabela3-2">
+                    <td class="tabela3-2">Welison</td>
+                    <td class="tabela3-2">Rua O</td>
+                    <td class="tabela3-2">6</td>
+                    <td class="tabela3-2">Santo André</td>
+                    <td class="tabela3-2">SP</td>
+                    <td class="tabela3-2">19000-666</td>
+                    <td class="tabela3-2">19 99999-6666</td>
+                </tr>
+                <tr class="tabela3-2">
+                    <td class="tabela3-2">Wilinson</td>
+                    <td class="tabela3-2">Rua P</td>
+                    <td class="tabela3-2">7</td>
+                    <td class="tabela3-2">Santa Cecília</td>
+                    <td class="tabela3-2">SP</td>
+                    <td class="tabela3-2">19000-777</td>
+                    <td class="tabela3-2">19 99999-7777</td>
+                </tr>
+                <tr class="tabela3-2">
+                    <td class="tabela3-2">Welerson</td>
+                    <td class="tabela3-2">Rua Q</td>
+                    <td class="tabela3-2">8</td>
+                    <td class="tabela3-2">Santo Andor</td>
+                    <td class="tabela3-2">SP</td>
+                    <td class="tabela3-2">19000-888</td>
+                    <td class="tabela3-2">19 99999-8888</td>
+                </tr>
+                <tr class="tabela3-2">
+                    <td class="tabela3-2">Wilistone</td>
+                    <td class="tabela3-2">Rua R</td>
+                    <td class="tabela3-2">9</td>
+                    <td class="tabela3-2">Santa Mercília</td>
+                    <td class="tabela3-2">SP</td>
+                    <td class="tabela3-2">19000-999</td>
+                    <td class="tabela3-2">19 99999-9999</td>
+                </tr>
+                <tr class="tabela3-2">
+                    <td class="tabela3-2">Weliston</td>
+                    <td class="tabela3-2">Rua S</td>
+                    <td class="tabela3-2">10</td>
+                    <td class="tabela3-2">Santo Cantão</td>
+                    <td class="tabela3-2">SP</td>
+                    <td class="tabela3-2">19000-000</td>
+                    <td class="tabela3-2">19 99999-0000</td>
+                </tr>
+                <tr class="tabela3-2">
+                    <td class="tabela3-2">Wilersyon</td>
+                    <td class="tabela3-2">Rua T</td>
+                    <td class="tabela3-2">11</td>
+                    <td class="tabela3-2">Santa Ursula</td>
+                    <td class="tabela3-2">SP</td>
+                    <td class="tabela3-2">19000-101</td>
+                    <td class="tabela3-2">19 99999-1010</td>
+                </tr>
+                <tr class="tabela3-2">
+                    <td class="tabela3-2">Wellington</td>
+                    <td class="tabela3-2"></td>
+                    <td class="tabela3-2"></td>
+                    <td class="tabela3-2">São Paulo</td>
+                    <td class="tabela3-2">SP</td>
+                    <td class="tabela3-2"></td>
+                    <td class="tabela3-2">11 99999-1234</td>
+                </tr>
+                </tbody>
+            <tfoot id="tabela3f" class="tabela3-1">
+                <td class="tabela3-2" colspan="7">Para maiores informações contatar Beltrano no ramal 6789</td>
+            </tfoot>
+        </table>
+        <p>mais informações, rever módulo 3 aulas 50</p>
 
 
  
