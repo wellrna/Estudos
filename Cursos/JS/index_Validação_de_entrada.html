@@ -5,7 +5,39 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Curso de Javascript</title>
 		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
 
+			html{
+				font-size: 20px;
+				font-family: 'Roboto Mono', monospace;
+			/*    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+				font-family: 'Poppins', 'Times New Roman', Times, serif ; */
+				scroll-behavior: smooth;
+			}
+			body {
+				color: red;
+				min-height: 100vh;
+/*				background-image: url('https://caelum-online-public.s3.amazonaws.com/imersao-dev-3/bg.png'); */
+				background-color: #000000;
+				background-size: 80vh;
+				background-position: center bottom;
+				background-repeat: no-repeat;
+			/*    border: 3px solid red;*/
+			}
+
+			.primaryInput1 {
+				text-align: center;
+			/*	padding: 5vh;
+				height: 100vh; */
+				border: 3px solid white;
+			}
+
+		</style>
+		<script>
 			function valida(){
 
 				if(document.f_aula.f_nome.value == ""){
@@ -97,19 +129,19 @@
 	</head>
 	<body>
 
-		<form name="f_aula" method="#" action="#" onsubmit="return valida()">
+		<form name="f_aula" method="#" action="#" class="primaryInput"  onsubmit="return valida()">
 		
-			<label>Nome:<label><br>
-			<input type="text" name="f_nome" id="f_inome" maxlength="50"><br><br>
+			<label>Nome:</label><br>
+			<input type="text" name="f_nome" id="f_inome" class="primaryInput"  maxlength="50"><br><br>
 
-			<label>Senha:<label><br>
-			<input type="password" name="f_senha" id="f_isenha" minlength="6" maxlength="20"><br><br>
+			<label>Senha:</label><br>
+			<input type="password" name="f_senha" id="f_isenha" class="primaryInput"  minlength="6" maxlength="20"><br><br>
 			
-			<label>Data Nascimento:<label><br>
-			<input type="date" name="f_data" id="f_idata" maxlength="10"><br><br>
+			<label>Data Nascimento:</label><br>
+			<input type="date" name="f_data" id="f_idata" class="primaryInput"  maxlength="10"><br><br>
 			
-			<label>e-mail:<label><br>
-			<input type="text" name="f_email" id="f_iemail" maxlength="50"><br><br>	
+			<label>e-mail:</label><br>
+			<input type="text" name="f_email" id="f_iemail" class="primaryInput"  maxlength="50"><br><br>	
 <!--
 			<button type="submit">Gravar</button>
 			</input>
