@@ -1,0 +1,145 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de média</title>
+</head>
+<style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+/*    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Poppins', 'Times New Roman', Times, serif ; */
+    scroll-behavior: smooth;
+}
+  body {
+    color: red;
+    min-height: 100vh;
+    background-image: url('https://caelum-online-public.s3.amazonaws.com/imersao-dev-3/bg.png');
+    background-color: #000000;
+    background-size: 80vh;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+/*    border: 3px solid red;*/
+  }
+
+  .container {
+    text-align: center;
+    padding: 5vh;
+    height: 100vh;
+    border: 3px solid white;
+  }
+
+  .title {
+    color: #ffffff;
+    margin: 0 0 1vh;
+    border: 3px solid green;
+  }
+
+  .subtitle {
+/*    color: #e95b19;*/
+    margin-top: 1vh;
+/*    border: 3px solid blueviolet;*/
+  }
+
+  #divresultado {
+/*    border: 3px solid yellow;*/
+  }
+
+  #divdados {
+    height: 30vh;
+/*    border: 3px solid blue;*/
+  }
+  
+  #notas{
+    margin-top: 2vh;
+  }
+
+  #presultado, #presultado1, #presultado2 {
+    color:#000000;
+  }
+
+  #presultado {
+    background-color: yellow;
+  }
+</style>
+<script>
+  let nome = "";
+  let nota1 = 0;
+  let nota2 = 0;
+  let nota3 = 0;
+  let nota4 = 0;
+  let media = 0;
+  let mediafinal = 0;
+  let resultad;
+  let resultad1;
+  let resultad2;
+
+  function calcula(){
+      nome = document.getElementById("nome");
+      nota1 = document.getElementById("nota1");
+      nota2 = document.getElementById("nota2");
+      nota3 = document.getElementById("nota3");
+      nota4 = document.getElementById("nota4");
+      nome = nome.value;
+      nota1 = parseFloat(nota1.value);
+      nota2 = parseFloat(nota2.value);
+      nota3 = parseFloat(nota3.value);
+      nota4 = parseFloat(nota4.value);
+      media = parseFloat((nota1 + nota2 + nota3 + nota4)/4);
+      if (media >= 6){
+        resultad2 = "Parabéns!!! Você foi Aprovado(a).";
+      } else if (media >= 3){
+        resultad2 = "Você não atingiu a média, está em Recuperação.";
+      } else {
+        resultad2 = "Você não atingiu a média, assim foi Reprovado(a).";
+      }
+      resultad = ("Bem vindo(a) " + nome + ".");
+      document.getElementById("presultado").innerHTML=resultad;
+      resultad1 = ("Sua média foi " + media + ".");
+      document.getElementById("presultado1").innerHTML=resultad1;
+      document.getElementById("presultado2").innerHTML=resultad2;
+      console.log("Bem vindo " + nome);
+      console.log(media);
+      console.log(resultad2);
+  }
+  
+</script>
+
+<body>
+
+  <div class="container">
+    <h1 class="title">Calculadora de média</h1>
+    <p class="subtitle">Descubra qual a sua média das notas de todas as provas!</p>
+    <div id="divresultado">
+      <div id="divdados">
+
+        <input id="nome" type="text" name="f_nome" placeholder="Guilherme Santos" maxlength="25" size="25"/><br>
+        <p id="notas" class="subtitle">Informe suas notas</p>
+        <label for="f_nota1" class="subtitle">1ª Nota</label>
+        <input id="nota1" type="number" name="f_nota1" placeholder="Ex: 5,50" min="0" max="10"/><br>
+        <span class="subtitle">2ª Nota</span>
+        <input id="nota2" type="number" name="f_nota2" placeholder="Ex: 5,50" min="0" max="10"/><br>
+        <span class="subtitle">3ª Nota</span>
+        <input id="nota3" type="number" name="f_nota3" placeholder="Ex: 5,50" min="0" max="10"/><br>
+        <span class="subtitle">4ª Nota</span>
+        <input id="nota4" type="number" name="f_nota4" placeholder="Ex: 5,50" min="0" max="10"/><br>
+
+        <button onclick="calcula()">Calcular</button><br>
+      </div>
+      <a id="presultado"></a><br>
+      <p id="presultado1"></p>
+      <p id="presultado2"></p>
+    </div>
+  </div>
+
+</body>
+
+</html>

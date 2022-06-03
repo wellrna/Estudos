@@ -1,0 +1,145 @@
+<html>
+
+<head>
+  <title>Imersão Dev - Aula </title>
+  <style>
+/*@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  outline: none;
+}
+
+body{
+  width:100vw;
+  height: 100vh;
+  background-image: url("https://i.pinimg.com/originals/75/f5/a4/75f5a4bf815ae6c8f9d79da0e3655594.gif");
+  background-size: cover;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.container{
+  width: 500px;
+  height: 500px;
+  border-radius: 12px;
+  flex-direction: column;
+  display: flex;
+  background-color: white;
+  padding: 0px 30px 45px 30px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.0), 0 6px 6px rgba(0,0,0,0.20);
+}
+
+.header{
+  width: 350px;
+  padding: 18px;
+  margin: 0 auto;
+  margin-top: -30px;
+  margin-bottom: 25px;
+  background-color: white;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.0), 0 6px 6px rgba(0,0,0,0.20);
+  color: #197BE9;
+  font-size: 18px;
+}
+
+.subTitle{
+  padding: 10px 0px;
+  font-size: 15px;
+  color: #197BE9;
+}
+
+.primaryInput{
+  padding: 12px;
+  border-radius: 10px;
+  border: 3px solid #197BE9;
+}
+
+button{
+  padding: 14px;
+  font-size: 15px;
+  background-color: #197BE9;
+  color: white;
+  border: 0px;
+  border-radius: 12px;
+  margin: 20px 0px;
+  cursor: pointer;
+}
+
+button:active{
+  color: #197BE9;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.0), 0 6px 6px rgba(0,0,0,0.20);
+}
+
+#resultado{
+  text-align: center;
+  color: #f00;
+}
+
+.ad{
+  width: 100px;
+  height: 50px;
+  background-image: url('https://imgur.com/W0DTszX.png');
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  animation: 4s floating infinite;
+}
+
+@keyframes floating{
+  to{
+    bottom: 40px;
+  }
+  50%{
+    bottom: 50px;
+  }
+  from{
+    bottom: 40px;
+  }
+}
+  </style>
+  <script>
+//    let valorDolar;
+//    let qtdeDolar;
+    function conversao(){
+      let valorDolar = document.getElementById('valorDolar');
+      let qtdeDolar  = document.getElementById('qtdeDolar');
+      
+      valorDolar = parseFloat(valorDolar.value);
+      qtdeDolar = parseFloat(qtdeDolar.value);
+      let resultado = valorDolar * qtdeDolar;
+      let resultad = ("Voce está convertendo U$ "+qtdeDolar.toFixed(2)+" em R$ "+resultado.toFixed(2)+", pela cotação de U$ 1,00 a R$ "+valorDolar.toFixed(3)+".");
+      document.getElementById("resultado").innerHTML =  resultad;
+      
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+     <div class="header">
+       <span> Conversor de Moedas</span>
+    </div>
+    <span class="subTitle">Cotação do dolar em R$</span>
+    <input id="valorDolar" class="primaryInput" type="number" placeholder="Ex: 5,523"/>
+    <span class="subTitle">Quantidade de dolares US$</span>
+    <input id="qtdeDolar" class="primaryInput" type="number" placeholder="Ex:  10,00"/>
+    <button onclick="conversao()">Converter</button>
+    <p id="resultado"></p>
+  </div>
+  
+  <a href="https://imersao.dev/aulas/aula01-conversor-moedas-variaveis">
+    <div class="ad">
+    </div>
+  </a>
+</body>
