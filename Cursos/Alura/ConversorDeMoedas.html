@@ -4,168 +4,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Imersão Dev - Aula</title>
+  <title>Conversor de Moedas</title>
 
   <style>
-/*
-  body {
-  font-family: "Roboto Mono", monospace;
-  min-height: 400px;
-  background-image: url("https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-1-conversor-de-moedas.png");
-  background-color: #000000;
-  background-size: 100vh;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-}
 
-.container {
-  text-align: center;
-  padding: 20px;
-  height: 100vh;
-}
+    body {
+      font-size: 20px;
+      font-family: 'Roboto Mono',monospace;
+      color: red;
+      min-height: 100vh;
+      background-image: url('https://images.pexels.com/photos/6590634/pexels-photo-6590634.jpeg');
+      background-color: #000000;
+      background-size: 100vh;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+    }
 
-.page-title {
-  color: #ffffff;
-  margin: 0 0 5px;
-}
+    .container {
+      text-align: center;
+      padding: 20px;
+      height: 100vh;
+    }
 
-.page-subtitle {
-  color: #ffffff;
-  margin-top: 5px;
-}
+    .page-title {
+      color:#ffffff;
+      margin: 0 0 5px;
+    }
 
-.page-logo {
-  width: 200px;
-}
+    .page-subtitle {
+      color:#ffffff;
+      margin-top: 5px;
+    }
 
-.alura-logo {
-  width: 40px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
+    .page-logo {
+      width: 200px;
+    }
 
-input {
-  margin: 12px;
-  padding: 6px;
-  border-radius: 5px;
-}
-
-label {
-  color: white;
-}
-
-button {
-  margin-top: 12px;
-  padding: 4px 8px;
-  border-radius: 10px;
-  background: #ffffff;
-}
-
-h2 {
-  color: #ffffff;
-  font-size: 30px;
-}
-*/
-body {
-  font-size: 20px;
-  font-family: 'Roboto Mono',monospace;
-  color: red;
-  min-height: 100vh;
-  /*background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-1-conversor-de-moedas.png');
-  background-image: url('https://images.pexels.com/photos/6766083/pexels-photo-6766083.jpeg');*/
-  background-image: url('https://images.pexels.com/photos/6590634/pexels-photo-6590634.jpeg');
-  background-color: #000000;
-  background-size: 100vh;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-}
-
-.container {
-  text-align: center;
-  padding: 20px;
-  height: 100vh;
-}
-
-.page-title {
-  color:#ffffff;
-  margin: 0 0 5px;
-}
-
-.page-subtitle {
-  color:#ffffff;
-  margin-top: 5px;
-}
-
-.page-logo {
-  width: 200px;
-}
-
-.alura-logo {
-  width: 40px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
+    .alura-logo {
+      width: 40px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
   </style>
   <script>
     let vlrDolar;
     let qtdeDolar;
     let result;
     let resultad;
-//    document.addEventListener("click", conversao);
 
     function conversao(){
       vlrDolar = document.getElementById("valorDolar");
       qtdeDolar = document.getElementById("quantidadeDolar");
-      console.log(vlrDolar.value);
-      console.log(qtdeDolar.value);
       vlrDolar = parseFloat(vlrDolar.value);
       qtdeDolar = parseFloat(qtdeDolar.value);
       result = (vlrDolar * qtdeDolar);
-      console.log(result);
-      resultad = ("Voce está convertendo U$ "+qtdeDolar.toFixed(2)+" em R$ "+result.toFixed(2)+", pela cotação de U$ 1.00 a R$ "+vlrDolar.toFixed(3)+".");
+      result= ((result.toFixed(2)).replace(".",","));
+      qtdeDolar = (qtdeDolar.toFixed(2).replace(".",","));
+      vlrDolar = (vlrDolar.toFixed(3).replace(".",","));
+      resultad = ("Voce está convertendo U$ "+qtdeDolar+" em R$ "+result+", pela cotação de U$ 1 equivale a R$ "+vlrDolar+".");
       document.getElementById("resultado").innerHTML=resultad;
-//      resultado.innerHtML = ("Voce está convertendo U$ "+qtdeDolar+" em R$ "+result+", pela cotação de U$ 1.00 a R$ "+vlrDolar+".");
-      console.log("Voce está convertendo U$ "+qtdeDolar.toFixed(2)+" em R$ "+result.toFixed(2)+", pela cotação de U$ 1.00 a R$ "+vlrDolar.toFixed(3)+".");
     }
- //   document.write("Qual o valor em dólar que você quer converter?");
- //   let valorEmDolarTexto = 
- //   let valorEmDolarTexto = parseFloat(valorEmDolarTexto);
-
- //   let valorEmReal = valorEmDolarTexto* 5.54;
- //   let valorEmRealFixado = valorEmReal.toFixed (2);
-
- //   alert("O Valor em Real é R$ " + valorEmRealFixado);
-
-    //Revisão
-
-    //variáveis var int - float - string
-
-    //alert - parseInt - parseFloat - prompt 
-
-    //operações + somar * multiplicar 
   </script>
 </head>
-<!--
-<body>
-<div class="container">
-  <h1 class="page-title">
-    Conversor de moedas
-  </h1>
-  <p class="page-subtitle">
-    Descubra os valores em dolar U$
-  </p>
-  <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt=""><br><br>
-  <label for="moeda">Insira o valor</label><br>
-  <input type="number" id="valor" size="2" /><br>
-  <button type="submit" onclick="Converter()">Converter</button>
-  <h2 id="valorConvertido"></h2>
-</div>
-<a href="https://alura.com.br/" target="_blank">
-  <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
-</body>
--->
 <body>
   <div class="container">
     <div class="header">
@@ -178,19 +79,5 @@ body {
    <input id="quantidadeDolar" class="primaryInput" type="number" placeholder="Ex:  10,00"/>
    <button onclick="conversao()">Converter</button><br>
    <p id="resultado"></p>
- </div>
-<!--
- conversao()
-  <div class="container">
-    <h1 class="page-title">  Conversor de Moedas  </h1>
-
-    <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt="">
   </div>
-  <div id="entrada">
-    <p>Qual o valor em dólar que você quer converter?</p>
-  </div>
-  <a href="https://alura.com.br/" target="_blank">
-    <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
-    </a>
--->    
 </body>

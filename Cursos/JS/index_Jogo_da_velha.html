@@ -3,54 +3,32 @@
 	<head>
 		<meta charset=“UTF-8”>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Jogo da Velha</title>
+		<title>Curso de Javascript</title>
 		
 		<style type="text/css">
 			#dvQuemComeca{
-				display: flex;
-				justify-content: center;
-				font-size: 2em;
 				font-family: Verdana, Geneva, Tahoma, sans-serif; /*Arial, Helvetica, sans-serif;*/
 				font-weight: bold;
 			}
 			#dvjogo{
-				width:610px;
-				height: 600px;
+				width:160px;
+				height: 160px;
 				display: flex;
 				flex-wrap: wrap;
-/*				align-content: center;
-				align-items: center;*/
-				margin: auto;
-			}
-			#resultado{
-				display: flex;
-				font-size: 4em;
-				font-family: Verdana, Geneva, Tahoma, sans-serif; /*Arial, Helvetica, sans-serif;*/
-				font-weight: bold;
-				background-color: yellow;
-				justify-content: center;
-				margin: auto;
-			}
-			#botao{
-				width: 8em;
-				height: 2em;
-				font-size: 2em;
-				font-family: Verdana, Geneva, Tahoma, sans-serif; /*Arial, Helvetica, sans-serif;*/
-				font-weight: bold;
+				align-content: flex-start;
 			}
 			.posjogo{
-				width:200px;
-				height:200px;
+				width:50px;
+				height:50px;
 				margin:0px;
 				padding:0px;
 				cursor:pointer;
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				font-size: 12em;
-				font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   /* 'Noto Sans Symbols 2', sans-serif; /* Verdana, Geneva, Tahoma, sans-serif; /*Arial, Helvetica, sans-serif;*/
+				font-size: 40pt;
+				font-family: Verdana, Geneva, Tahoma, sans-serif; /*Arial, Helvetica, sans-serif;*/
 				font-weight: bold;
-				vertical-align:text-top;
 			}
 			#p1{
 				border-right: 1px solid #000;
@@ -269,9 +247,7 @@
 					verifica=verVitoria();
 					atualizaTabuleiro();
 					if(verifica!=""){
-						document.getElementById("resultado").innerHTML=("Computador venceu!!!");
-						document.getElementById("resultado").style.backgroundColor="red";
-//						alert(verifica+" venceu")
+						alert(verifica+" venceu")
 						jogando=false;
 					}
 					quemJoga=0;
@@ -365,9 +341,7 @@
 						atualizaTabuleiro()
 						verifica=verVitoria();
 						if(verifica!=""){
-							document.getElementById("resultado").innerHTML=("Jogador venceu!!!");
-							document.getElementById("resultado").style.backgroundColor="green";
-//							alert(verifica+" venceu")
+							alert(verifica+" venceu")
 							jogando=false;
 						}
 						jogada++;
@@ -381,15 +355,11 @@
 				for (let l=0; l<3; l++){
 					for (let c=0; c<3; c++){
 						if(jogo[l][c]=="X"){
-							tabuleiro[l][c].innerHTML="✖";   // x             
-//							tabuleiro[l][c].style.backgroundImage="url(1.jpg)";
-							tabuleiro[l][c].style.color="lightcoral";
+							tabuleiro[l][c].innerHTML="X";
 							tabuleiro[l][c].style.cursor="default";
 
 						} else if(jogo[l][c]=="O"){
-							tabuleiro[l][c].innerHTML="⬤";   // ֎֍●      ●
-//							tabuleiro[l][c].style.backgroundImage="url(2.jpg)";
-							tabuleiro[l][c].style.color="lightblue";
+							tabuleiro[l][c].innerHTML="O";
 							tabuleiro[l][c].style.cursor="default";
 							
 						} else {
@@ -407,21 +377,18 @@
 				jogo=[["","",""],["","",""],["","",""]];
 				tabuleiro=[[document.getElementById("p1"),document.getElementById("p2"),document.getElementById("p3")],[document.getElementById("p4"),document.getElementById("p5"),document.getElementById("p6")],[document.getElementById("p7"),document.getElementById("p8"),document.getElementById("p9")]];
 				atualizaTabuleiro();
-				document.getElementById("resultado").innerHTML="&nbsp;";
-				document.getElementById("resultado").style.backgroundColor="white";
 				if(quemComeca==1){
 					quemComeca=0;
 					quemJoga=quemComeca;
-					document.getElementById("comeca").innerHTML=" Jogador";
-					document.getElementById("comeca").style.backgroundColor="green";
+					document.getElementById("dvQuemComeca").innerHTML="Quem inicia o jogo é o Jogador"
 				} else {
 					quemComeca=1;
 					quemJoga=quemComeca;
-					document.getElementById("comeca").innerHTML=" Computador";
-					document.getElementById("comeca").style.backgroundColor="yellow";
+					document.getElementById("dvQuemComeca").innerHTML="Quem inicia o jogo é o Computador"
 					cpuJoga();
 				}
 			}
+
 
 			window.addEventListener("load",iniciar)
 		</script>
@@ -429,11 +396,9 @@
 	<body>
 
 		<div id="dvmenu">
-			<div id="dvQuemComeca">
-				<a>Quem inicia é o </a>&nbsp;<a id="comeca">...</a>
-			</div>
-			<button id="botao" onclick="iniciar()">Iniciar Jogo</button>
-		</div><br>
+			<div id="dvQuemComeca">Quem inicia o jogo é ...</div>
+			<button onclick="iniciar()">Iniciar Jogo</button>
+		</div>
 		<div id="dvjogo">
 			<div id="p1" class="posjogo" onclick="jogar(1)"></div>
 			<div id="p2" class="posjogo" onclick="jogar(2)"></div>
@@ -444,7 +409,6 @@
 			<div id="p7" class="posjogo" onclick="jogar(7)"></div>
 			<div id="p8" class="posjogo" onclick="jogar(8)"></div>
 			<div id="p9" class="posjogo" onclick="jogar(9)"></div>
-		</div><br>
-		<div id="resultado"></div>
+		</div>
 	</body>
 </html>
