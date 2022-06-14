@@ -172,13 +172,14 @@
 			return a.idade > b.idade ? 1 : b.idade > a.idade ? -1 : 0;
 		});
 
-		document.write("OBJETO ordenado Idade decrescente: (Impresso com InnerHTML) <br>");
+//		document.write("OBJETO ordenado Idade decrescente: (Impresso com InnerHTML) <br>");
 		for (i = 0; i < pessoas1.length; i++) {
 //			document.write(JSON.stringify(pessoas1[i].nome).replace(/"/g, '') + ",&nbsp;" + JSON.stringify(pessoas1[i].idade) + ",&nbsp;" + JSON.stringify(pessoas1[i].cidade).replace(/"/g, '') + "<br>");
-//			document.write((pessoas1[i].nome).replace(/"/g, '') + ",&nbsp;" + (pessoas1[i].idade) + ",&nbsp;" + (pessoas1[i].cidade).replace(/"/g, '') + "<br>");
-			let XX = (pessoas[0].toString());
+			document.write("<br>COMEÇOU ");
+			document.write((pessoas1[i].nome).replace(/"/g, '') + ",&nbsp;" + (pessoas1[i].idade) + ",&nbsp;" + (pessoas1[i].cidade).replace(/"/g, '') + "<br>");
+			let XX = (pessoas[i].toString());
 			console.log(XX);
-			document.getElementById("resultado").innerText=XX;
+			document.getElementById("resultado").innerHTML=XX;
 		}
 
 	</script>
